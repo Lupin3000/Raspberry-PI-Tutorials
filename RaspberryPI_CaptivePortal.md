@@ -160,6 +160,6 @@ Sometimes macOS does not open the Captive Portal (_for example if you have modif
 
 ## Additional
 
-Note like the first in first part, this tutorial did not go into more depth on security (_e.g. os hardening, firewall, etc._)!
+_Note_ like the first in first part, this tutorial did not go into more depth on security (e.g. os hardening, firewall, etc.)!_
 
 [Go Back](./README.md)
