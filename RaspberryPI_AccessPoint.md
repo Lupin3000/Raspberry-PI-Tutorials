@@ -312,5 +312,5 @@ $ ps ax | grep dhcpcd
 
 If you don't have the time, take a look at [RaspAP](https://raspap.com). It does more or less the same thing, with some more features. Please also note that the tutorial did not go into more depth on security (_e.g. OS hardening, firewall, etc._)!
 
-[Go Back](readme.md)
+[Go Back](./README.md)
 
