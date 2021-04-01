@@ -68,10 +68,10 @@ StatusPage status.html
 # Spalsh page
 SplashPage splash.html
 
-# Redirect URL
+# Redirect url
 RedirectURL https://google.com
 
-# MaxClients
+# Max clients
 MaxClients 100
 ```
 
