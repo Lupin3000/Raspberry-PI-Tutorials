@@ -6,5 +6,6 @@ The author of these scripts (_code_) take no responsibility for your use or misu
 
 ## Table of Contents
 
-- [Create simple Wi-Fi Access Point](./RaspberryPI_AccessPoint.md)
-
+- **Wi-Fi Access Point**
+  - [Create simple Wi-Fi Access Point](./RaspberryPI_AccessPoint.md)
+  - [Create simple Captive Portal](./RaspberryPI_CaptivePortal.md)
