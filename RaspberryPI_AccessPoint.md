@@ -50,7 +50,7 @@ static ip_address=192.168.0.1/24
 nohook wpa_supplicant
 
 # don't send DHCP requests to wlan0 interface (optional)
-# denyinterfaces wlan0
+# denyinterfaces eth0
 ```
 
 _Note: read this [manual page](https://www.daemon-systems.org/man/dhcpcd.8.html) for more informations._
