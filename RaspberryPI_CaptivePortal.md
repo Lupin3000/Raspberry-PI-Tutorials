@@ -145,7 +145,16 @@ $ sudo systemctl enable nodogsplash
 $ sudo systemctl status nodogsplash
 ```
 
-## macOS
+## Debug
+
+If something don't work, following commands will help. Also check your configuration files again! Sometimes errors creep into the IP addresses.
+
+```shell
+$ systemctl status nodogsplash
+$ ps ax | grep nodogsplash
+```
+
+**macOS**
 
 Sometimes macOS does not open the Captive Portal (_for example if you have modified the default DNS settings_), you can try `http://captive.apple.com` or `http://192.168.0.1`.
 
