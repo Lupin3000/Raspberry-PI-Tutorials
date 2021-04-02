@@ -97,7 +97,7 @@ $ sudo tcpdump -i wlan1 -e -s 256 -l type mgt subtype beacon or subtype probe-re
 
 ### Channel hopping
 
-In order not to always have to change the channel manually, create a bash script that does the work in the background.
+In order not to always have to change the channel manually, create a bash script (_channel_hopping.sh_) that does the work for you in the background.
 
 ```shell
 # create bash script
@@ -107,7 +107,7 @@ $ vim channel_hopping.sh
 $ chmod u+x channel_hopping.sh
 
 # run in backgroud
-$ sudo ./channel_switch.sh &
+$ sudo ./channel_hopping.sh &
 ```
 
 The content of `channel_hopping.sh`.
