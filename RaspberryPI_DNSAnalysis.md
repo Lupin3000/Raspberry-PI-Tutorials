@@ -4,7 +4,7 @@ After the AP has been set up on the Raspberry PI and STA's have connected to it,
 
 ## Objective
 
-The aim is to analyze the DNS queries from connected devices, for later actions.
+The aim is to analyze the DNS queries from connected STA's, for later actions.
 
 ## Install needed and/or optional packages
 
