@@ -15,8 +15,22 @@ Install (_or ensure they are installed_) following packages.
 $ sudo apt update -y && sudo apt upgrade -y
 
 # install needed packages
-$ sudo apt install -y vim
+$ sudo apt install -y vim tcpdump
 ```
+
+## tcpdump
+
+As in a previous tutorial, you can use `tcpdump` to analyze the current DNS traffic.
+
+```shell
+# show DNS traffic for interface wlan0
+$ sudo tcpdump -i wlan0 -nn -l udp port 53
+
+# show DNS traffic for interface wlan1
+$ sudo tcpdump -i wlan1 -nn -l udp port 53
+```
+
+With the help of "grep" and other Linux standard tools, a more precise filtering is possible.
 
 ## Dnsmasq log files
 
