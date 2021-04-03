@@ -1,4 +1,4 @@
-# DNS hijacking, DNS poisoning, or DNS redirection
+# DNS hijacking, DNS poisoning or DNS redirection
 
 ...
 
