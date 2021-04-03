@@ -1,5 +1,9 @@
 # Raspberry-PI-Tutorials
 
+## Why this repository (_documentation_)?
+
+This documentation is for all peoples which do use a Raspberry PI (_and want to learn something_), using the Internet (_to get more sensible_) or are simply interested into cyber security. Of course you could buy something like a [WiFi Pineapple](https://www.hak5.org) or start directly with other Linux Distributions (_like Kali Linux, Parrot OS, etc._), but I personally do belive you learn much more if you do all by your self. In addition, the costs and the time required are very low - but the knowledge is very valuable.
+
 **Very Important**
 
 The author of these scripts (_code_) take no responsibility for your use or misuse! Respect the law in your country/location/area! The information included at this repository is for educational purposes only!
