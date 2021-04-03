@@ -4,7 +4,7 @@ Since most traffic nowadays is encrypted, you can try a little trick to bypass t
 
 ## Objective
 
-The aim is to analyze the HTTPS traffic from connected STA's where the `HSTS` web security policy mechanism is not in use.
+The aim is to analyze the HTTPS traffic from connected STA's where for example `HSTS` web security policy mechanism or other protections are not in use.
 
 ## Install needed and/or optional packages
 
