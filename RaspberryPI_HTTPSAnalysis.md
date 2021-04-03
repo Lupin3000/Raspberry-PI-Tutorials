@@ -110,3 +110,11 @@ $ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8
 
 ...
 
+```shell
+#
+$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P https 192.168.0.1 8443 http 192.168.0.1 8080
+```
+
+...
+
+
