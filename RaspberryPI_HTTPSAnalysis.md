@@ -101,23 +101,58 @@ $ sudo tree /usr/sslsplit/
 
 ### iptables
 
-...
-
-```
-# plain text HTTP traffic (80) is redirected to port 8080
-$ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
-
-# SSL-based HTTPS traffic (443) is redirected to port 8443
-$ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8443
-```
-
-...
+Route the traffic from specific ports over to sslsplit (_listening on port 8443 or port 8080_)
 
 ```shell
-#
-$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf https 192.168.0.1 8443 http 192.168.0.1 8080
+# save current iptables rules
+$ iptables-save > /usr/sslsplit/rules/saved
+
+# http/https iptable rules
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8443
+
+# some other rules (optional)
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 587 -j REDIRECT --to-ports 8443
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 465 -j REDIRECT --to-ports 8443
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 993 -j REDIRECT --to-ports 8443
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 5222 -j REDIRECT --to-ports 8080
 ```
 
-...
+_Note: You can save the iptables rules (e.q. as bash script)!_
 
+Start sslsplit (_and optional tail_).
 
+```shell
+# tail all logfiles (optional)
+$ sudo tail -f /var/log/sslsplit/connect.log /var/log/sslsplit/content.log /var/log/sslsplit/masterkeys.log
+
+# start for http/https
+$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf https 192.168.0.1 8443 http 192.168.0.1 8080
+
+# start for ssl/tcp
+$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
+```
+
+When you are ready.
+
+```shell
+# clean iptables
+$ iptables -F
+$ iptables -X
+$ iptables -t nat -F
+$ iptables -t nat -X
+$ iptables -t mangle -F
+$ iptables -t mangle -X
+$ iptables -P INPUT ACCEPT
+$ iptables -P FORWARD ACCEPT
+$ iptables -P OUTPUT ACCEPT
+
+# restore iptables rules
+$ iptables-restore < /usr/sslsplit/rules/saved
+```
+
+## Important
+
+Many modern browser protect this action and clients will see only a warning! For your own needs, transfer the certificate `/usr/sslsplit/ca.crt` from the Raspberry Pi to the client device (_import into browser_).
+
+[Go Back](./README.md)
