@@ -25,8 +25,15 @@ $ sudo apt install -y iptables sslsplit
 
 _Note: Read this [document](https://www.roe.ch/SSLsplit) for more informations._
 
+### Create configuration
+
+Many online search results end up with a very long command line options for sslsplit, don't do that (_just create your own configuration(s) file(s)_)!
+
 ```shell
-# modify sslsplit configuration
+# read configuration sample (optional)
+$ sudo /usr/sslsplit/sslsplit.conf.sample
+
+# add own sslsplit configuration
 $ sudo vim /usr/sslsplit/sslsplit.conf
 ```
 
@@ -68,7 +75,7 @@ Debug yes
 
 _Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more informations._
 
-### Generate certifcate
+### Generate self signed certifcate
 
 ```shell
 # show openssl.cnf (optional)
@@ -112,7 +119,7 @@ $ sudo tree /usr/sslsplit/
 └── sslsplit.conf.sample
 ```
 
-### iptables
+### Add iptables rules
 
 Route the traffic from specific ports over to sslsplit (_listening on port 8443 or port 8080_)
 
@@ -131,7 +138,7 @@ $ sudo iptables -t nat -A PREROUTING -p tcp --dport 993 -j REDIRECT --to-ports 8
 $ sudo iptables -t nat -A PREROUTING -p tcp --dport 5222 -j REDIRECT --to-ports 8080
 ```
 
-_Note: You can save the iptables rules (e.q. as bash script)!_
+_Note: You could also save the iptables-save, iptables rules, iptables clean-up and iptables-restore as bash script!_
 
 Start sslsplit (_and optional tail_).
 
