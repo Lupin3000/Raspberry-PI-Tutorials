@@ -48,6 +48,9 @@ MasterKeyLog /var/log/sslsplit/masterkeys.log
 
 # Debug mode run in foreground (equivalent to -D option)
 Debug yes
+
+# Passthrough SSL	connections if they cannot be split (equivalent to -P option)
+Passthrough true
 ```
 
 _Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more informations._
@@ -112,7 +115,7 @@ $ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8
 
 ```shell
 #
-$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P https 192.168.0.1 8443 http 192.168.0.1 8080
+$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf https 192.168.0.1 8443 http 192.168.0.1 8080
 ```
 
 ...
