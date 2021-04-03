@@ -48,9 +48,6 @@ MasterKeyLog /var/log/sslsplit/masterkeys.log
 
 # Debug mode run in foreground (equivalent to -D option)
 Debug yes
-
-# Passthrough SSL	connections if they cannot be split (equivalent to -P option)
-Passthrough true
 ```
 
 _Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more informations._
@@ -127,10 +124,10 @@ Start sslsplit (_and optional tail_).
 $ sudo tail -f /var/log/sslsplit/connect.log /var/log/sslsplit/content.log /var/log/sslsplit/masterkeys.log
 
 # start for http/https
-$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf https 192.168.0.1 8443 http 192.168.0.1 8080
+$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P https 192.168.0.1 8443 http 192.168.0.1 8080
 
 # start for ssl/tcp
-$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
+$ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
 ```
 
 When you are ready.
