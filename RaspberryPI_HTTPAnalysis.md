@@ -68,6 +68,7 @@ Starting capture on wlan1 interface
 2021-04-03 10:31:39	192.168.0.183	172.217.168.67	>	GET	ocsp.pki.goog	/gts1o1core/MFYwVKADAgEAME0wSzBJMAkGBSsOAwIaBQAEFEJGMMInGdvecPCP%2FHPlpl9mOBe8BBSY0fhuEOvPm%2BxgnxiQG6DrfQn9KwIQG%2FLvCsEmgsUDAAAAAMvPVg%3D%3D	HTTP/1.1	-	-
 2021-04-03 10:31:39	13.224.89.198	192.168.0.183	<	-	-	-	HTTP/1.1	200	OK
 2021-04-03 10:31:39	172.217.168.67	192.168.0.183	<	-	-	-	HTTP/1.1	200	OK
+...
 ```
 
 _Note: read this [manual page](https://linux.die.net/man/1/httpry) for more informations._
