@@ -18,7 +18,7 @@ $ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim tree
 
 # install needed packages
-$ sudo apt install -y sslsplit
+$ sudo apt install -y iptables sslsplit
 ```
 
 ## sslsplit
@@ -96,7 +96,17 @@ $ sudo tree /usr/sslsplit/
 └── sslsplit.conf.sample
 ```
 
+### iptables
+
 ...
 
+```
+# plain text HTTP traffic (80) is redirected to port 8080
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
 
+# SSL-based HTTPS traffic (443) is redirected to port 8443
+$ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8443
+```
+
+...
 
