@@ -1,6 +1,6 @@
 # HTTPS Analysis
 
-...
+Since most traffic nowadays is encrypted, you can try a little trick to bypass this protection. The idea is, clients do connect to you with one of your own certificates what enables you to analyze encrypted traffic.
 
 ## Objective
 
