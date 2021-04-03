@@ -18,3 +18,7 @@ The author of these scripts (_code_) take no responsibility for your use or misu
   - [DNS Analysis](./RaspberryPI_DNSAnalysis.md)
   - [HTTP Analysis](./RaspberryPI_HTTPAnalysis.md)
   - [HTTPS Analysis](./RaspberryPI_HTTPSAnalysis.md)
+- **:pill: The Red Pill**
+  - [DNS Redirection]()
+  - [BeEF]()
+  - [Metasploit]()
