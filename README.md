@@ -11,4 +11,5 @@ The author of these scripts (_code_) take no responsibility for your use or misu
   - [Simple Captive Portal](./RaspberryPI_CaptivePortal.md)
 - **Analysis** 
   - [Wi-Fi Analysis](./RaspberryPI_WiFiAnalysis.md)
-  - [DNS Analysis](././RaspberryPI_DNSAnalysis.md)
+  - [DNS Analysis](./RaspberryPI_DNSAnalysis.md)
+  - [HTTP Analysis](./RaspberryPI_HTTPAnalysis.md)
