@@ -18,15 +18,6 @@ $ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim
 ```
 
-## Preparation
-
-If you have already set up an AP and/or a Captive portal, you should stop them now.
-
-```shell
-# stop nodogsplash service
-$ sudo systemctl stop nodogsplash
-```
-
 ## Dnsmasq log files
 
 I hope you remember when and where you configure the DNS log files! The answer is, you did it in the file `/etc/dnsmasq.conf`.
