@@ -50,8 +50,7 @@ It works even easier and clearer with `httpry`.
 ```shell
 # start httpry on interface wlan1
 $ sudo httpry -i wlan1
-httpry version 0.1.8 -- HTTP logging and information retrieval tool
-Copyright (c) 2005-2014 Jason Bittel <jason.bittel@gmail.com>
+...
 ----------------------------
 Hash buckets:       64
 Nodes inserted:     10
