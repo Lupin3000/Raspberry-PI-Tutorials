@@ -30,7 +30,7 @@ _Note: Read this [document](https://www.roe.ch/SSLsplit) for more informations._
 $ sudo vim /usr/sslsplit/sslsplit.conf
 ```
 
-Add the following lines in `/usr/sslsplit/sslsplit.conf` configuration file.
+Add the following lines in `/usr/sslsplit/sslsplit.conf` configuration file (_modify later for your needs_).
 
 ```sslsplit.conf
 # CA cert (equivalent to -c option)
@@ -42,7 +42,7 @@ CAKey /usr/sslsplit/ca.key
 # Connect log (equivalent to -l)
 ConnectLog /var/log/sslsplit/connect.log
 
-# Content log (equivalent to -L option)
+# Content log (equivalent to -L option (excludes -S/-F))
 ContentLog /var/log/sslsplit/content.log
 
 # Log master keys in SSLKEYLOGFILE format (equivalent to -M option)
@@ -50,6 +50,12 @@ MasterKeyLog /var/log/sslsplit/masterkeys.log
 
 # Debug mode run in foreground (equivalent to -D option)
 Debug yes
+
+# Daemon mode: run in background (equivalent to -d option)
+# Daemon yes
+
+# Passthrough SSL connections (equivalent to -P option)
+# Passthrough yes
 ```
 
 _Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more informations._
@@ -132,7 +138,7 @@ $ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P https 192.168.0.1 8443 http 19
 $ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
 ```
 
-When you are ready.
+When you are ready press `CTRL` + `c`, restore your iptables rules and start traffic analysis.
 
 ```shell
 # clean iptables
