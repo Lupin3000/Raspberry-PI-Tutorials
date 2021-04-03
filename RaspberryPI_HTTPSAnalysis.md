@@ -179,6 +179,6 @@ $ sudo cat /var/log/sslsplit/connect.log
 
 ## Important
 
-Many modern browsers protect such kind of analysis and clients will see only a warning! For your own needs, transfer the certificate `/usr/sslsplit/ca.crt` from the Raspberry Pi to the client device (_import into browser_).
+Many modern browsers protect such kind of analysis and clients will see a warning (_e.q. untrusted certificate_)! For your own needs, transfer the certificate `/usr/sslsplit/ca.crt` from the Raspberry Pi to the client device (_import into browser_).
 
 [Go Back](./README.md)
