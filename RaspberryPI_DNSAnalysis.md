@@ -88,7 +88,6 @@ END {
     qforwarded += forwarded[name];
     qacache += cached[name];
   }
-  print "";
   printf " %40s | %9d  | %9d  | %9d\n", "total:", queries, qforwarded, qacache;
 }
 ```
