@@ -23,6 +23,8 @@ $ sudo apt install -y iptables sslsplit
 
 ## sslsplit
 
+_Note: Read this [document](https://www.roe.ch/SSLsplit) for more informations._
+
 ```shell
 # modify sslsplit configuration
 $ sudo vim /usr/sslsplit/sslsplit.conf
@@ -146,6 +148,12 @@ $ iptables -P OUTPUT ACCEPT
 
 # restore iptables rules
 $ iptables-restore < /usr/sslsplit/rules/saved
+
+# show content.log
+$ sudo cat /var/log/sslsplit/content.log
+
+# show connect.log
+$ sudo cat /var/log/sslsplit/connect.log
 ```
 
 ## Important
