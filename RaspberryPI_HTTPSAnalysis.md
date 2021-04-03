@@ -56,6 +56,14 @@ Debug yes
 
 # Passthrough SSL connections (equivalent to -P option)
 # Passthrough yes
+
+# Proxy specifications (ipv4)
+# ProxySpec http 192.168.0.1 8080
+# ProxySpec https 192.168.0.1 8443
+
+# Proxy specifications (ipv4)
+# ProxySpec http ::ffff:c0a8:1 8080
+# ProxySpec https ::ffff:c0a8:1 8443
 ```
 
 _Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more informations._
