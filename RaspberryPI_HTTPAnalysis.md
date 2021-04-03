@@ -70,6 +70,6 @@ Starting capture on wlan1 interface
 2021-04-03 10:31:39	172.217.168.67	192.168.0.183	<	-	-	-	HTTP/1.1	200	OK
 ```
 
-_Note: read this [manual page](https://linux.die.net/man/1/httpry) for more informations.
+_Note: read this [manual page](https://linux.die.net/man/1/httpry) for more informations._
 
 [Go Back](./README.md)
