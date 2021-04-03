@@ -6,7 +6,7 @@ This documentation is for all peoples which do use a Raspberry PI (_and want to 
 
 **:point_right: Very Important :point_left:**
 
-The author of these scripts (_code_) take no responsibility for your use or misuse! Respect the law in your country/location/area! The information included at this repository is for educational purposes only!
+The author of this repository (_information, scripts, code_) take no responsibility for your use or misuse! Respect the law in your country/location/area! The information included at this repository is for educational purposes only!
 
 ## Table of Contents
 
@@ -19,6 +19,6 @@ The author of these scripts (_code_) take no responsibility for your use or misu
   - [HTTP Analysis](./RaspberryPI_HTTPAnalysis.md)
   - [HTTPS Analysis](./RaspberryPI_HTTPSAnalysis.md)
 - **:pill: The Red Pill**
-  - [DNS Redirection]()
-  - [BeEF]()
-  - [Metasploit]()
+  - [DNS Redirection]() (_follow soon_)
+  - [BeEF]() (_follow soon_)
+  - [Metasploit]() (_follow soon_)
