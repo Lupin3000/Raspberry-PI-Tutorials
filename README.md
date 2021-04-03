@@ -9,4 +9,6 @@ The author of these scripts (_code_) take no responsibility for your use or misu
 - **Wi-Fi Access Point**
   - [Simple Access Point](./RaspberryPI_AccessPoint.md)
   - [Simple Captive Portal](./RaspberryPI_CaptivePortal.md)
+- **Analysis** 
   - [Wi-Fi Analysis](./RaspberryPI_WiFiAnalysis.md)
+  - [DNS Analysis](././RaspberryPI_DNSAnalysis.md)
