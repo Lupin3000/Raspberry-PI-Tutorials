@@ -109,6 +109,35 @@ Example entry.
 192.168.0.1             example.com
 ```
 
-If you have already called up the domain, you can now wait a little or delete the DNS cache. Otherwise the real website will still be displayed!
+_Note: If you have already called up the domain, you can now wait a little or delete the DNS cache. Otherwise the real website will still be displayed!_
+
+Another way to do this attack with Dnsmasq is as follows.
+
+```shell
+# modify dnsmasq configuration
+$ sudo vim /etc/dnsmasq.conf
+
+# add spoof.hosts file
+$ sudo vim /etc/dnsmasq.d/spoof.hosts
+
+# restart dnsmasq service
+$ sudo systemctl restart dnsmasq
+```
+
+Add the following lines in `/etc/dnsmasq.conf` configuration file.
+
+```dnsmasq.conf
+addn-hosts=/etc/dnsmasq.d/spoof.hosts
+```
+
+Add the following lines in `/etc/dnsmasq.d/spoof.hosts` file. It uses the same format as `/etc/hosts`.
+
+```spoof.hosts
+192.168.0.1 www.example.com example.com
+```
+
+## Additional
+
+If the STA is using Domain Name System Security Extensions (_DNSSEC_) technologies, this will not work!
 
 [Go Back](./README.md)
