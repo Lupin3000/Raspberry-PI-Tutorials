@@ -136,16 +136,19 @@ msf6 > tree /var/www/html/data/
 ...
 
 ```html
+# will follow
 ```
 
 ...
 
 ```css
+# will follow
 ```
 
 ...
 
 ```javascript
+# will follow
 ```
 
 ### Start connection handler
@@ -154,7 +157,7 @@ msf6 > tree /var/www/html/data/
 
 ```shell
 # use multi/handler
-msf6 > > use exploit/multi/handler
+msf6 > use exploit/multi/handler
 
 # show informations (optional)
 msf6 exploit(multi/handler) > info
