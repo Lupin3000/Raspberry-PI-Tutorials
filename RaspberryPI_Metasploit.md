@@ -133,16 +133,59 @@ msf6 > tree /var/www/html/data/
 
 ### Prepare the spoofed domain page
 
-...
+Content of file `/var/www/html/index.html`.
 
 ```html
-# will follow
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Security Warning - with security update</title>
+  <link type="text/css" rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div id="warning">
+    <h1>Security Warning</h1>
+    <p>We have detected a security problem, please install the free security update!</p>
+  </div>
+  <div id="patch">
+    <span><!-- placeholder security update --></span>
+  </div>
+</body>
+</html>
 ```
 
-...
+Content of file `/var/www/html/styles/style.css`.
 
 ```css
-# will follow
+@charset "UTF-8";
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {color: red;}
+
+p {
+  margin-top: 5px;
+  color: black;
+}
+
+a {text-decoration: underline;}
+
+a:hover {text-decoration: none;}
+
+#warning, #patch {
+  margin: 20px auto 0 auto;
+  padding: 0;
+  width: 400px;
+}
 ```
 
 ...
