@@ -136,6 +136,8 @@ Add the following lines in `/etc/dnsmasq.d/spoof.hosts` file. It uses the same f
 192.168.0.1 www.example.com example.com
 ```
 
+_Note: There are some more possibilities with Dnsmasq, just search for it._
+
 ## Additional
 
 If the STA is using Domain Name System Security Extensions (_DNSSEC_) technologies, this will not work!
