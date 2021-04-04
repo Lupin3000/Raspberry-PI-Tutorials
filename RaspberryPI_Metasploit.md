@@ -146,11 +146,13 @@ Content of file `/var/www/html/index.html`.
 <body>
   <div id="warning">
     <h1>Security Warning</h1>
-    <p>We have detected a security problem, please install the free security update!</p>
+    <p>We have detected a serious security problem,<br /> 
+       please install now the free security update!</p>
   </div>
   <div id="patch">
     <span><!-- placeholder security update --></span>
   </div>
+<script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
 ```
@@ -188,10 +190,22 @@ a:hover {text-decoration: none;}
 }
 ```
 
-...
+Content of file `/var/www/html/scripts/script.js`.
 
 ```javascript
-# will follow
+'use strict';
+
+if (navigator.userAgent.match(/Linux/i)) {
+  document.getElementById("patch").innerHTML = "<a href=\"data/security.elf\" target=\"_blank\">Linux Security Update</a>";
+} else if (navigator.userAgent.match(/Windows/i)) {
+  document.getElementById("patch").innerHTML = "<a href=\"data/security.exe\" target=\"_blank\">Windows Security Update</a>";
+} else if (navigator.userAgent.match(/Mac/i)) {
+  document.getElementById("patch").innerHTML = "<a href=\"data/security.dmg\" target=\"_blank\">macOS Security Update</a>";
+} else if (navigator.userAgent.match(/android/i)) {
+  document.getElementById("patch").innerHTML = "<a href=\"data/security.apk\" target=\"_blank\">Android Security Update</a>";
+} else {
+  document.getElementById("patch").innerHTML = "Your system is not supported..."
+}
 ```
 
 ### Start connection handler
