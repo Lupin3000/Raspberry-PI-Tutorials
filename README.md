@@ -20,5 +20,5 @@ The author of this repository (_information, scripts, code_) take no responsibil
   - [HTTPS Analysis](./RaspberryPI_HTTPSAnalysis.md)
 - **:pill: The Red Pill**
   - [DNS Redirection](./RaspberryPI_DNSRedirection.md)
-  - [Metasploit](./RaspberryPI_Metasploit.md) (_in progress_)
+  - [Metasploit](./RaspberryPI_Metasploit.md)
   - [BeEF](./RaspberryPI_BeEF.md) (_follow soon_)
