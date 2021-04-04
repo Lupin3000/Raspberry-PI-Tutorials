@@ -1,10 +1,10 @@
-#
+# Metasploit
 
-...
+... work in progress ...
 
 ## Objective
 
-...
+The aim of this tutorial is to install Metasploit on Raspberry PI and to provide a tiny introduction.
 
 ## Install needed and/or optional packages
 
@@ -20,14 +20,14 @@ $ sudo apt install -y curl nmap
 
 ## Preparation
 
-...
+For the Metasploit (_first steps_) section, you can create some folders.
 
 ```shell
-#
+# create some directories
 $ mkdir /var/www/html/{images,styles,data}
 ```
 
-## Install Metasploit
+## Install and start Metasploit
 
 ```shell
 # download latest install script
@@ -39,8 +39,8 @@ $ chmod u+x msfinstall
 # start installation
 $ sudo ./msfinstall
 
-# show version and finalize installation
-$ msfconsole --version
+# start msfconsole
+$ msfconsole
 ```
 
 Start the initial msfconsole (_incl. Metasploit version_), this will also setup your database.
@@ -53,21 +53,9 @@ Initial MSF web service account password? (Leave blank for random password):
 
 Please store this credentials!!!
 
-## Start Metasploit
+## Metasploit (_first steps_)
 
 ```shell
-# start msf console
-$ msfconsole
-
-# show the current data service status
-msf6 > db_status
-
-# run update
-msf6 > msfupdate
-
-# list database workspaces
-msf6 > workspace
-
 # add workspace (and switch)
 msf6 > workspace -a first-steps
 
@@ -82,31 +70,29 @@ msf6 > services
 
 # exit msf console
 msf6 > exit
-```
 
-...
-
-```shell
-# start msf console (without banner)
-$ msfconsole -L
-
-# change workspace
-msf6 > workspace first-steps
-
-#
+# search for available http auxiliaries (optional)
 msf6 > search auxiliary name:http
 
-#
+# enable directory scanner
 msf6 > use auxiliary/scanner/http/dir_scanner
 
-#
+# show options
 msf6 auxiliary(scanner/http/dir_scanner) > options
 
-#
+# set RHOST value
 msf6 auxiliary(scanner/http/dir_scanner) > set RHOSTS 192.168.0.1
 
-#
+# run scanner
 msf6 auxiliary(scanner/http/dir_scanner) > run
+...
+[+] Found http://192.168.0.1:80/data/ 404 (192.168.0.1)
+[+] Found http://192.168.0.1:80/images/ 404 (192.168.0.1)
+[+] Found http://192.168.0.1:80/styles/ 404 (192.168.0.1)
+...
+
+# exit msfconsole
+msf6 auxiliary(scanner/http/dir_scanner) > quit
 ```
 
 [Go Back](./README.md)
