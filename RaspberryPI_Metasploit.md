@@ -210,8 +210,6 @@ if (navigator.userAgent.match(/Linux/i)) {
 
 ### Start connection handler
 
-...
-
 ```shell
 # use multi/handler
 msf6 > use exploit/multi/handler
