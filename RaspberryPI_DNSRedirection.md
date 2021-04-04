@@ -21,8 +21,70 @@ $ sudo apt install -y vim tree
 $ sudo apt install -y lighttpd
 ```
 
+_Note: You could use also use any other common known web server (like Apache, Nginx, etc.) or Build-in web server (like Python, PHP, etc.)._
+
+## Additional preparation
+
+In case you have NoDogSplash service running, I recommend to stop it (_for now_).
+
+```shell
+# stop nodogsplash service
+$ sudo systemctl stop nodogsplash.service
+```
+
 ## lighttpd
 
-...
+After successful installation the web server is already started and you can visit with your browser the "Placeholder page" via `http://raspberrypi.local` or `http://<ip>`. But you should re-configure some default settings first.
+
+```shell
+# show lighttpd.conf (optional)
+$ sudo cat /etc/lighttpd/lighttpd.conf
+
+# show placeholder page (optional)
+$ sudo cat /var/www/html/index.lighttpd.html
+
+# list directories (optional)
+$ sudo ls -la /var/www/
+
+# show group file (optional)
+$ sudo cat /etc/group | grep 'www-data'
+
+# show passwd file (optional)
+$ sudo cat /etc/passwd | grep 'www-data'
+
+# change file owner and group recursive
+$ sudo chown -R www-data:www-data /var/www/html
+
+# add pi user to group www-data
+$ sudo usermod -G www-data -a pi
+
+# change permissions recursive
+$ sudo chmod -R 775 /var/www/html
+
+# reload lighttpd
+$ sudo service lighttpd force-reload
+
+# create index.html
+$ vim /var/www/html/index.html
+```
+
+The content of `/var/www/html/index.html`.
+
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Fake Page</title>
+</head>
+<body>
+  <div>
+    <p>Fake page...</p>
+  </div>
+</body>
+</html>
+```
+
+Open again `http://raspberrypi.local` inside your browser, you should see now the content of `index.html`.
+
+
 
 [Go Back](./README.md)
