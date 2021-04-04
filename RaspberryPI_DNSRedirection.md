@@ -87,6 +87,28 @@ The content of `/var/www/html/index.html`.
 
 Open again `http://raspberrypi.local` inside your browser, you should see now the content of `index.html`.
 
+## Dnsmasq
 
+There are various options with Dnsmasq to redirect DNS requests. The real simplest one is via `/etc/hosts`. But you have to check again whether this file is read by Dnsmasq. Check the configuration for this `/etc/dnsmasq.conf`!
+
+```dnsmasq.conf
+# do not read hosts file (optional)
+# no-hosts
+```
+
+Add another entry into `/etc/hosts`.
+
+```shell
+# modify hosts file
+$ sudo vim /etc/hosts
+```
+
+Example entry.
+
+```hosts
+192.168.0.1             example.com
+```
+
+If you have already called up the domain, you can now wait a little or delete the DNS cache. Otherwise the real website will still be displayed!
 
 [Go Back](./README.md)
