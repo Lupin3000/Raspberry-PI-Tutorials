@@ -1,6 +1,6 @@
 # Metasploit
 
-... work in progress ...
+With Metasploit you have many different attack possibilities, in this tutorial I will just show one of many. You can use this as a starting point and expand it further.
 
 ## Objective
 
@@ -264,5 +264,9 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	...
 bash-3.2$ exit
 ```
+
+## Additional
+
+To bypass common antivirus products, you should have a look at evasion techniques!!!! [Here](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf) you can read a document provided by Rapid7.
 
 [Go Back](./README.md)
