@@ -4,7 +4,7 @@ With Metasploit you have many different attack possibilities, in this tutorial I
 
 ## Objective
 
-The aim of this tutorial is to install Metasploit on Raspberry PI and to provide a tiny introduction.
+The aim of this tutorial is to install Metasploit on Raspberry PI and to provide a tiny download (_TCP reverse shell_) on spoofed DNS web page.
 
 ## Install needed and/or optional packages
 
