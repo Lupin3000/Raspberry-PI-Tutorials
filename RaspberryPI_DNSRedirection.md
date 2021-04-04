@@ -15,7 +15,7 @@ Install (_or ensure they are installed_) following packages.
 $ sudo apt update -y && sudo apt upgrade -y
 
 # install optional packages (optional)
-$ sudo apt install -y vim tree
+$ sudo apt install -y vim
 
 # install needed packages
 $ sudo apt install -y lighttpd
@@ -140,6 +140,6 @@ _Note: There are some more possibilities with Dnsmasq, just search for it._
 
 ## Additional
 
-If the STA is using Domain Name System Security Extensions (_DNSSEC_) technologies, this will not work!
+If the STA is using Domain Name System Security Extensions (_DNSSEC_) technologies or VPN, this attack will not work!
 
 [Go Back](./README.md)
