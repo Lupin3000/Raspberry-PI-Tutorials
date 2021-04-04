@@ -1,10 +1,10 @@
 # DNS hijacking, DNS poisoning or DNS redirection
 
-...
+Since Dnsmasq is already running on the Raspberry PI, it is very easy to forward (_unprotected or poorly configured_) STA's to wrong IP's. Through the various DNS or HTTP(S) analyzes, you also know which domains are being accessed by clients.
 
 ## Objective
 
-...
+The aim of this tutorial is to setup quickly a simple DNS redirection.
 
 ## Install needed and/or optional packages
 
@@ -71,6 +71,8 @@ $ vim /var/www/html/index.html
 The content of `/var/www/html/index.html`.
 
 ```html
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Fake Page</title>
