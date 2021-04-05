@@ -23,6 +23,8 @@ $ sudo apt install -y curl git ruby-full
 
 ## GCC-9
 
+_Note: the following steps (e.q. scp, make) will take a very long time._
+
 ```shell
 ┌──[lupin@HackMac]::[~/Desktop]
 └─ % curl http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/gcc-9.3.0.tar.gz -o gcc-9.3.0.tar.gz
