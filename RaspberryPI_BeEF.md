@@ -36,6 +36,9 @@ _Note: the following steps (e.q. scp, make) will take a very long time. I have d
 └─ % scp -r gcc-9.3.0 Raspi:/home/pi/
 
 ┌──[lupin@HackMac]::[~/Desktop]
+└─ % rm -fr gcc-9.3.0 gcc-9.3.0.tar.gz
+
+┌──[lupin@HackMac]::[~/Desktop]
 └─ % ssh Raspi
 
 # change directory
