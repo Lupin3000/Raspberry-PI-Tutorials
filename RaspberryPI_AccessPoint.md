@@ -95,6 +95,9 @@ log-queries
 log-dhcp
 log-facility=/tmp/dnsmasq.log
 
+# DNS server
+server=8.8.8.8
+
 # do not read hosts file (optional)
 # no-hosts
 
