@@ -1,10 +1,10 @@
 # BeEF on Raspberry PI
 
-...
+BeEF (_Browser Exploitation Framework_) is an penetration tool focused on exploiting vulnerabilities inside web browsers.
 
 ## Objective
 
-...
+The aim of this tutorial is to set up BeEF on Raspberry PI and to show you where you could place the `hook.js`.
 
 ## Install needed and/or optional packages
 
@@ -58,6 +58,8 @@ Just change username and password on `/home/pi/beef/config.yaml`.
 $ vim config.yaml
 ```
 
+Read this [Wiki](https://github.com/beefproject/beef/wiki/Configuration) for more informations.
+
 ## Start BeEF
 
 ```shell
@@ -92,6 +94,11 @@ Content of file `/var/www/html/index.html`.
 </html>
 ```
 
-Finally open in your browser the URL `http://192.168.0.1:3000/ui/panel`.
+Finally open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in config.yaml_). If you follow the output inside the terminal, you will see that some other packages are required. Install them if needed.
 
+##Additional
+
+If the client has JavaScript disabled, this attack will not work.
+
+[Go Back](./README.md)
 
