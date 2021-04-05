@@ -18,7 +18,7 @@ $ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim tree
 
 # install needed packages
-$ sudo apt install -y curl git ruby-full
+$ sudo apt install -y build-essential curl git ruby-full
 ```
 
 ## GCC-9
