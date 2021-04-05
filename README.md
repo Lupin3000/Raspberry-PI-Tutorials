@@ -21,3 +21,4 @@ The author of this repository (_information, scripts, code_) take no responsibil
 - **:pill: The Red Pill**
   - [DNS Redirection](./RaspberryPI_DNSRedirection.md)
   - [Metasploit](./RaspberryPI_Metasploit.md)
+  - [BeEF](./RaspberryPI_BeEF.md)
