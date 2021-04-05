@@ -8,7 +8,7 @@
 
 ## Install needed and/or optional packages
 
-Install (or ensure they are installed) following packages.
+Install (_or ensure they are installed_) following packages.
 
 ```shell
 # update system (optional)
@@ -23,7 +23,7 @@ $ sudo apt install -y build-essential curl git ruby-full
 
 ## GCC-9
 
-_Note: the following steps (e.q. scp, make) will take a very long time._
+_Note: the following steps (e.q. scp, make) will take a very long time. I have downloaded and extracted on my macOS (to speed up)._
 
 ```shell
 ┌──[lupin@macOS]::[~/Desktop]
@@ -38,25 +38,25 @@ _Note: the following steps (e.q. scp, make) will take a very long time._
 ┌──[lupin@HackMac]::[~/Desktop]
 └─ % ssh Raspi
 
-#
+# change directory
 $ cd gcc-9.3.0
 
-#
+# download required prerequisites
 $ ./contrib/download_prerequisites
 
-#
+# run configuration
 $ ./configure --disable-multilib
 
-#
+# run build
 $ make -j 4
 
-#
+# run install
 $ sudo make install
 
-#
+# reboot system
 $ sudo reboot
 
-#
+# show gcc version
 $ gcc --version
 ```
 
