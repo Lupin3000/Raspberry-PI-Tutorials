@@ -24,3 +24,6 @@ The author of this repository (_information, scripts, code_) take no responsibil
   - [BeEF](./RaspberryPI_BeEF.md)
 - **:pager: Bluetooth**
   - will follow soon 
+- **:gift: Some goodies**
+  - will follow soon
+
