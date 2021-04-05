@@ -94,9 +94,11 @@ Content of file `/var/www/html/index.html`.
 </html>
 ```
 
-Finally open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in config.yaml_). If you follow the output inside the terminal, you will see that some other packages are required. Install them if needed.
+Finally open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in config.yaml_).
 
-##Additional
+_Note: If you follow the output inside the terminal, you will see that some other packages are required. Install them if you need them (maybe in second terminal session) and execute the BeEF command again._
+
+## Additional
 
 If the client has JavaScript disabled, this attack will not work.
 
