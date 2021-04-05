@@ -1,4 +1,4 @@
-# DNS Analysis
+# DNS Analysis with Raspberry PI
 
 After the AP has been set up on the Raspberry PI and STA's have connected to it, it is very interesting to know which domains are requested by the clients (_devices_) in our network.
 
