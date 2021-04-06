@@ -1,6 +1,6 @@
 # Metasploit on Raspberry PI
 
-With Metasploit you have many different attack possibilities, in this tutorial I will just show one of many. You can use this as a starting point and expand it further.
+With Metasploit, you have many attack possibilities, in this tutorial I will just show one of many. You can use this as a starting point and expand it further.
 
 ## Objective
 
@@ -23,7 +23,7 @@ $ sudo apt install -y curl nmap
 
 ## Preparation
 
-For the Metasploit (_first steps_) section and the Metaslpoit/Msfvenom (_final attack_) sections, you can create already some folders.
+For the Metasploit (_first steps_) section, and the Metaslpoit/Msfvenom (_final attack_) sections, you can create already some folders.
 
 ```shell
 # create some directories
@@ -46,7 +46,7 @@ $ sudo ./msfinstall
 $ msfconsole
 ```
 
-Start the initial msfconsole (_incl. Metasploit version_), this will also setup your database.
+Start the initial msfconsole (_incl. Metasploit version_), this will also set up your database.
 
 ```
 Would you like to use and setup a new database (recommended)? y
@@ -54,7 +54,7 @@ Initial MSF web service account username? [pi]:
 Initial MSF web service account password? (Leave blank for random password):
 ```
 
-Please store this credentials!!!
+Please store these credentials!!!
 
 ## Metasploit (_first steps_)
 
@@ -214,7 +214,7 @@ if (navigator.userAgent.match(/Linux/i)) {
 # use multi/handler
 msf6 > use exploit/multi/handler
 
-# show informations (optional)
+# show information's (optional)
 msf6 exploit(multi/handler) > info
 
 # show options (optional)
@@ -230,7 +230,7 @@ msf6 exploit(multi/handler) > run
 
 ### Wait or test for connection
 
-You can now wait or just test it yourself (_without payload, of course_).
+You can now wait or just test it yourself (_without a payload, of course_).
 
 With a 2nd tty you can check if port 4444 is listen on Raspberry PI.
 
@@ -267,4 +267,4 @@ bash-3.2$ exit
 
 To bypass common antivirus products, you should have a look at evasion techniques!!!! [Here](https://www.rapid7.com/globalassets/_pdfs/whitepaperguide/rapid7-whitepaper-metasploit-framework-encapsulating-av-techniques.pdf) you can read a document provided by Rapid7.
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

@@ -81,4 +81,4 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

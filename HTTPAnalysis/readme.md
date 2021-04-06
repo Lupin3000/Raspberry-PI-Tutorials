@@ -70,6 +70,6 @@ Starting capture on wlan1 interface
 ...
 ```
 
-_Note: read this [manual page](https://linux.die.net/man/1/httpry) for more informations._
+_Note: read this [manual page](https://linux.die.net/man/1/httpry) for more information's._
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

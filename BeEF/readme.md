@@ -1,6 +1,6 @@
 # BeEF on Raspberry PI
 
-BeEF (_Browser Exploitation Framework_) is an penetration tool focused on exploiting vulnerabilities inside web browsers.
+BeEF (_Browser Exploitation Framework_) is a penetration tool focused on exploiting vulnerabilities inside web browsers.
 
 ## Objective
 
@@ -47,7 +47,7 @@ if [ "${Distro}" = "Debian" ] || [ "${Distro}" = "Kali" ]; then
 ...
 ```
 
-To save a lot of time, you can add `--no-document` into commmand `sudo gem${RUBYSUFFIX} update --system` on line 205.
+To save a lot of time, you can add `--no-document` into command `sudo gem${RUBYSUFFIX} update --system` on line 205.
 
 ## BeEF configuration
 
@@ -58,7 +58,7 @@ Just change username and password on `/home/pi/beef/config.yaml`.
 $ vim config.yaml
 ```
 
-Read this [Wiki](https://github.com/beefproject/beef/wiki/Configuration) for more informations.
+Read this [Wiki](https://github.com/beefproject/beef/wiki/Configuration) for more information's.
 
 ## Start BeEF
 
@@ -94,7 +94,7 @@ Content of file `/var/www/html/index.html`.
 </html>
 ```
 
-Finally open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in config.yaml_).
+Finally, open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in the config.yaml_).
 
 _Note: If you follow the output inside the terminal, you will see that some other packages are required. Install them if you need them (maybe in second terminal session) and execute the BeEF command again._
 
@@ -102,5 +102,4 @@ _Note: If you follow the output inside the terminal, you will see that some othe
 
 If the client has JavaScript disabled, this attack will not work.
 
-[Go Back](./README.md)
-
+[Go Back](../readme.md)

@@ -76,7 +76,7 @@ $ sudo tcpdump -i wlan1 -s 0 -l type mgt subtype probe-req | grep -o -P '\(\K[^\
 $ sudo tcpdump -i wlan1 -s 0 -l -e type mgt subtype probe-req | grep -o -E '([[:xdigit:]]{2}:){5}[[:xdigit:]]{2}'
 ```
 
-Nobody like to watch all the time on the screen, you can save all informations to a text file.
+Nobody like to watch all the time on the screen, you can save all information's to a text file.
 
 ```shell
 # save to file
@@ -106,7 +106,7 @@ $ vim channel_hopping.sh
 # change permissions
 $ chmod u+x channel_hopping.sh
 
-# run in backgroud
+# run in background
 $ sudo ./channel_hopping.sh &
 ```
 
@@ -144,6 +144,6 @@ $ sudo ip link set wlan1 up
 $ sudo wavemon -i wlan1
 ```
 
-Press `F3` key to scan and later later `F10` key to exit.
+Press `F3` key to scan and later press `F10` key to exit.
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

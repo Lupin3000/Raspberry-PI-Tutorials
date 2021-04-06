@@ -1,6 +1,6 @@
 # Create a Raspberry PI Captive Portal
 
-After you have set up the Wi-Fi [access point](./RaspberryPI_AccessPoint.md) on the Raspberry PI, you may also need a Captive Portal. Here are instructions for doing this. These steps can also be completed in a few minutes.
+After you have set up the Wi-Fi [access point](../AccessPoint) on the Raspberry PI, you may also need a Captive Portal. Here are instructions for doing this. These steps can also be completed in a few minutes.
 
 ## Prerequisite
 
@@ -52,7 +52,7 @@ $ sudo vim /etc/nodogsplash/nodogsplash.conf
 
 Uncomment and/or add the following lines in `/etc/nodogsplash/nodogsplash.conf` configuration file.
 
-```nodogsplash.conf
+```
 # Gateway interface
 GatewayInterface wlan1
 
@@ -75,14 +75,14 @@ RedirectURL https://google.com
 MaxClients 100
 ```
 
-_Note: read this [documentation pages](https://nodogsplashdocs.readthedocs.io/en/stable/) for more informations._
+_Note: read this [documentation pages](https://nodogsplashdocs.readthedocs.io/en/stable/) for more information's._
 
 Now you modify `/etc/nodogsplash/htdocs/splash.html` and `/etc/nodogsplash/htdocs/status.html`. If you don't like to provide your own content now, you can skip this step.
 
 ```shell
 $ sudo tree /etc/nodogsplash/htdocs/
 ├── images
-│   └── splash.jpg
+│ └── splash.jpg
 ├── splash.css
 ├── splash.html
 └── status.html
@@ -160,6 +160,6 @@ Sometimes macOS does not open the Captive Portal (_for example if you have modif
 
 ## Additional
 
-_Note:_ like the first in first part, this tutorial did not go into more depth on security (_e.g. os hardening, firewall, etc._)!
+_Note: like the first in first part, this tutorial did not go into more depth on security (e.g. os hardening, firewall, etc.)!_
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

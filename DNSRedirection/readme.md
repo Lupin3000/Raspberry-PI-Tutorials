@@ -4,7 +4,7 @@ Since Dnsmasq is already running on the Raspberry PI, it is very easy to forward
 
 ## Objective
 
-The aim of this tutorial is to setup quickly a simple DNS redirection.
+The aim of this tutorial is to set up quickly a simple DNS redirection.
 
 ## Install needed and/or optional packages
 
@@ -25,7 +25,7 @@ _Note: You could use also use any other common known web server (like Apache, Ng
 
 ## Additional preparation
 
-In case you have NoDogSplash service running, I recommend to stop it (_for now_).
+In case you have NoDogSplash service running, I recommend stopping it (_for now_).
 
 ```shell
 # stop nodogsplash service
@@ -34,7 +34,7 @@ $ sudo systemctl stop nodogsplash.service
 
 ## lighttpd
 
-After successful installation the web server is already started and you can visit with your browser the "Placeholder page" via `http://raspberrypi.local` or `http://<ip>`. But you should re-configure some default settings first.
+After successful installation the web server is already started, and you can visit with your browser the "Placeholder page" via `http://raspberrypi.local` or `http://<ip>`. But you should re-configure some default settings first.
 
 ```shell
 # show lighttpd.conf (optional)
@@ -105,11 +105,11 @@ $ sudo vim /etc/hosts
 
 Example entry.
 
-```hosts
+```
 192.168.0.1             example.com
 ```
 
-_Note: If you have already called up the domain, you can now wait a little or delete the DNS cache. Otherwise the real website will still be displayed!_
+_Note: If you have already called up the domain, you can now wait a little or delete the DNS cache. Otherwise, the real website will still be displayed!_
 
 Another way to do this attack with Dnsmasq is as follows.
 
@@ -126,13 +126,13 @@ $ sudo systemctl restart dnsmasq
 
 Add the following lines in `/etc/dnsmasq.conf` configuration file.
 
-```dnsmasq.conf
+```
 addn-hosts=/etc/dnsmasq.d/spoof.hosts
 ```
 
 Add the following lines in `/etc/dnsmasq.d/spoof.hosts` file. It uses the same format as `/etc/hosts`.
 
-```spoof.hosts
+```
 192.168.0.1 www.example.com example.com
 ```
 
@@ -142,4 +142,4 @@ _Note: There are some more possibilities with Dnsmasq, just search for it._
 
 If the STA is using Domain Name System Security Extensions (_DNSSEC_) technologies or VPN, this attack will not work!
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

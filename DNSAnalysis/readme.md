@@ -114,4 +114,4 @@ $ sudo awk -f dnsmasq.awk /tmp/dnsmasq.log
 $ sudo awk -f dnsmasq.awk /tmp/dnsmasq.log | less
 ```
 
-[Go Back](./README.md)
+[Go Back](../readme.md)

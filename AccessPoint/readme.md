@@ -39,7 +39,7 @@ $ sudo vim /etc/dhcpcd.conf
 
 Uncomment and/or add the following lines in `/etc/dhcpcd.conf` configuration file.
 
-```dhcpcd.conf
+```
 # interface configuration
 interface wlan1
 
@@ -77,7 +77,7 @@ $ sudo vim /etc/dnsmasq.conf
 
 Add the following lines in `/etc/dnsmasq.conf` configuration file.
 
-```dnsmasq.conf
+```
 # listen for DHCP/DNS requests only on specified interfaces
 interface=wlan1
 
@@ -142,7 +142,7 @@ $ sudo vim /etc/hostapd/hostapd.conf
 
 Add the following lines in `/etc/hostapd/hostapd.conf` configuration file. The value for SSID in my example is `WuTangLan`, change for your needs.
 
-```hostapd.conf
+```
 # interface
 interface=wlan1
 
@@ -180,9 +180,9 @@ macaddr_acl=0
 ignore_broadcast_ssid=0
 ```
 
-_Note: read this [manual page](https://nxmnpg.lemoda.net/8/hostapd) for more informations._
+_Note: read this [manual page](https://nxmnpg.lemoda.net/8/hostapd) for more information's._
 
-Change permissions, test and modify hostapd initscript.
+Change permissions, test and modify hostapd init script.
 
 ```shell
 # change file permissions
@@ -191,13 +191,13 @@ $ sudo chmod 600 /etc/hostapd/hostapd.conf
 # test hostapd configuration (optional)
 $ sudo hostapd -dd /etc/hostapd/hostapd.conf
 
-# modify hostapd initscript
+# modify hostapd init script
 $ sudo vim /etc/default/hostapd
 ```
 
-Modify the following lines in `/etc/default/hostapd` initscript
+Modify the following lines in `/etc/default/hostapd` init script
 
-```hostapd
+```
 RUN_DAEMON=yes
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
@@ -228,14 +228,14 @@ $ sudo mv /etc/sysctl.conf /etc/sysctl.conf.bak
 $ sudo vim /etc/sysctl.conf
 ```
 
-Uncomment the following lines in `/etc/sysctl.conf` configuration file.
+Add the following lines in `/etc/sysctl.conf` configuration file.
 
-```sysctl.conf
+```
 net.ipv4.ip_forward=1
 net.ipv6.conf.all.forwarding=1
 ```
 
-Add new iptables rules (_store them and reload on boot_).
+Add new iptables rules (_store them and reload after the boot_).
 
 ```shell
 # add new iptables rules
@@ -250,9 +250,9 @@ $ sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 $ sudo vim /etc/rc.local
 ```
 
-Add restore iptables command to run on startup (_add before `exit 0`_).
+Add restore iptables commands to run on the startup (_add before `exit 0`_).
 
-```/etc/rc.local
+```shell
 #!/bin/sh -e
 #
 # rc.local
@@ -315,5 +315,4 @@ $ ps ax | grep dhcpcd
 
 If you don't have the time, take a look at [RaspAP](https://raspap.com). It does more or less the same thing, with some more features. Please also note that the tutorial did not go into more depth on security (_e.g. OS hardening, firewall, etc._)!
 
-[Go Back](./README.md)
-
+[Go Back](../readme.md)

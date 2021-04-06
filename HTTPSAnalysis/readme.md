@@ -23,7 +23,7 @@ $ sudo apt install -y iptables sslsplit
 
 ## sslsplit
 
-_Note: Read this [document](https://www.roe.ch/SSLsplit) for more informations._
+_Note: Read this [document](https://www.roe.ch/SSLsplit) for more information's._
 
 ### Create configuration
 
@@ -39,7 +39,7 @@ $ sudo vim /usr/sslsplit/sslsplit.conf
 
 Add the following lines in `/usr/sslsplit/sslsplit.conf` configuration file (_modify later for your needs_).
 
-```sslsplit.conf
+```
 # CA cert (equivalent to -c option)
 CACert /usr/sslsplit/ca.crt
 
@@ -73,7 +73,7 @@ Debug yes
 # ProxySpec https ::ffff:c0a8:1 8443
 ```
 
-_Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more informations._
+_Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more information's._
 
 ### Generate self signed certifcate
 
@@ -84,13 +84,11 @@ $ sudo cat /usr/lib/ssl/openssl.cnf
 
 Next to all other content inside `/usr/lib/ssl/openssl.cnf`, ensure the following options are set.
 
-```openssl.cnf
+```
 [ req ]
-
 distinguished_name	= req_distinguished_name
 
 [ v3_ca ]
-
 subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid:always,issuer
 basicConstraints = critical,CA:true
@@ -127,7 +125,7 @@ Route the traffic from specific ports over to sslsplit (_listening on port 8443 
 # save current iptables rules
 $ iptables-save > /usr/sslsplit/rules/saved
 
-# http/https iptable rules
+# http/https iptables rules
 $ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
 $ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8443
 
@@ -179,6 +177,6 @@ $ sudo cat /var/log/sslsplit/connect.log
 
 ## Important
 
-Many modern browsers protect such kind of analysis and clients will see a warning (_e.q. untrusted certificate_)! For your own needs, transfer the certificate `/usr/sslsplit/ca.crt` from your Raspberry PI to the client device (_import into browser_).
+Many modern browsers protect such a kind of analysis and clients will see a warning (_e.q. untrusted certificate_)! For your own needs, transfer the certificate `/usr/sslsplit/ca.crt` from your Raspberry PI to the client device (_import into a browser_).
 
-[Go Back](./README.md)
+[Go Back](../readme.md)
