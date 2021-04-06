@@ -2,20 +2,23 @@
 
 ...
 
-##
+## Objective
 
 ...
 
-##
+## Install needed and/or optional packages
 
-...
+Install (_or ensure they are installed_) following packages.
 
 ```shell
-#
-$ sudo apt install -y cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev wget pkg-config python3-numpy python3-distutils python3-setuptools
+# update system (optional)
+$ sudo apt update -y && sudo apt upgrade -y
 
-# 
-$ sudo apt install -y python3-qtpy
+# install optional packages (optional)
+$ sudo apt install -y vim
+
+# install needed packages
+$ sudo apt install -y cmake libusb-1.0-0-dev make gcc g++ libbluetooth-dev wget pkg-config python3-numpy python3-distutils python3-setuptools python3-qtpy
 ```
 
 ## Install libbtbb
