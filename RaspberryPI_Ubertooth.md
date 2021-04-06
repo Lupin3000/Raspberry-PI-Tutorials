@@ -32,10 +32,7 @@ $ wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O
 $ tar -xf libbtbb-2020-12-R1.tar.gz
 
 #
-$ cd libbtbb-2020-12-R1
-
-#
-$ mkdir build && cd build
+$ mkdir libbtbb-2020-12-R1/build && cd libbtbb-2020-12-R1/build
 
 #
 $ cmake ..
@@ -65,10 +62,7 @@ $ wget https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-
 $ tar -xf ubertooth-2020-12-R1.tar.xz
 
 #
-$ cd ubertooth-2020-12-R1/
-
-#
-$ mkdir host/build && cd host/build
+$ mkdir ubertooth-2020-12-R1/host/build && cd ubertooth-2020-12-R1/host/build
 
 #
 $ cmake ..
