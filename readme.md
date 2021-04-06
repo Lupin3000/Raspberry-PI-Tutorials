@@ -1,4 +1,4 @@
-# Raspberry-PI-Tutorials
+# Raspberry PI Tutorials
 
 ## Why this repository (_documentation_)?
 
@@ -10,6 +10,8 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ## Table of Contents
 
+- **:wrench:Preparation**
+  - [Prepare Raspberry PI](./Preparation)
 - **:satellite: Wi-Fi Access Point**
   - [Simple Access Point](./AccessPoint)
   - [Simple Captive Portal](./CaptivePortal)
