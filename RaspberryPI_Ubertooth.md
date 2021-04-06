@@ -23,27 +23,28 @@ $ sudo apt install -y python3-qtpy
 ...
 
 ```shell
+# change into home directory
 $ cd ~
 
-#
-$ wget https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -O libbtbb-2020-12-R1.tar.gz
+# download archive
+$ curl -L -C - https://github.com/greatscottgadgets/libbtbb/archive/2020-12-R1.tar.gz -o libbtbb.tar.gz
 
-#
-$ tar -xf libbtbb-2020-12-R1.tar.gz
+# extract archive
+$ tar -xf libbtbb.tar.gz
 
-#
+# create sub directories and change into
 $ mkdir libbtbb-2020-12-R1/build && cd libbtbb-2020-12-R1/build
 
-#
+# create Makefile
 $ cmake ..
 
-#
+# start build
 $ make
 
-#
+# start installation
 $ sudo make install
 
-#
+# configure dynamic linker run-time bindings
 $ sudo ldconfig
 ```
 
@@ -52,29 +53,29 @@ $ sudo ldconfig
 ...
 
 ```shell
-#
+# change into home directory
 $ cd ~
 
-#
-$ wget https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-R1/ubertooth-2020-12-R1.tar.xz
+# download archive
+$ curl -L -C - https://github.com/greatscottgadgets/ubertooth/releases/download/2020-12-R1/ubertooth-2020-12-R1.tar.xz -o ubertooth.tar.xz
 
-#
-$ tar -xf ubertooth-2020-12-R1.tar.xz
+# extract archive
+$ tar -xf ubertooth.tar.xz
 
-#
+# create sub directories and change into
 $ mkdir ubertooth-2020-12-R1/host/build && cd ubertooth-2020-12-R1/host/build
 
-#
+# create Makefile
 $ cmake ..
 
-#
+# build applications
 $ make
 
-#
+# install applications
 $ sudo make install
 
-#
+# configure dynamic linker run-time bindings
 $ sudo ldconfig
 ```
 
-
+[Go Back](./README.md)
