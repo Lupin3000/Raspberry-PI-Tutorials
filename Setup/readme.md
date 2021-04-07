@@ -58,6 +58,8 @@ $ sudo su -
 $ raspi-config
 ```
 
+![raspi-config](./raspi-config.jpg)
+
 _Note: I activate SSH and set up the Wi-Fi again (_just to ensure_)._
 
 [Go Back](../readme.md)
