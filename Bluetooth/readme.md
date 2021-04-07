@@ -99,7 +99,7 @@ $ sudo hcitool scan
 # scan for remote devices (incl. information and oui)
 $ sudo hcitool scan --info --oui
 
-# start passive LE scan
+# start passive LE scan (default is active)
 $ sudo hcitool lescan --passive
 
 # start active LE scan (don't filter duplicates)
@@ -113,10 +113,10 @@ While the scan is running (_or quickly after the stop_), you can try to get more
 ```shell
 # start scan for devices
 [bluetooth]# scan on
-
 ...
 [NEW] Device E8:38:80:7F:E3:D7 root
 ...
+
 # show device information
 [bluetooth]# info E8:38:80:7F:E3:D7
 Device E8:38:80:7F:E3:D7 (public)
@@ -137,6 +137,7 @@ Device E8:38:80:7F:E3:D7 (public)
 Again with the `hcitool`.
 
 ```shell
+# show specific device information
 $ sudo hcitool info E8:38:80:7F:E3:D7
 Requesting information ...
 	BD Address:  E8:38:80:7F:E3:D7
@@ -144,6 +145,7 @@ Requesting information ...
 	Device Name: root
 	...
 
+# show specific LE device information
 $ sudo hcitool leinfo 4D:87:7A:55:2F:31
 Requesting information ...
 	Handle: 64 (0x0040)
