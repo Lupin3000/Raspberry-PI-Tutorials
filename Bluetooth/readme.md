@@ -20,13 +20,11 @@ $ sudo apt install -y bluez
 
 ## Some basics first
 
-There are already some common tools available on Raspberry PI - for example `hcitool` and `bluetoothctl`.
-
-_Note: As per my knowledge the hcitool is deprecated, I will focus only on bluetoothctl. Of course, you could have a look on the hcitool, too._
+With bluez you have already some common tools available on Raspberry PI - for example `hcitool` and `bluetoothctl`.
 
 ### Controller
 
-Some basic commands for the controller.
+Some basic commands for the controller with `bluetoothctl`.
 
 ```shell
 # verify Bluetooth service is enabled (optional)
@@ -60,9 +58,16 @@ $ sudo bluetoothctl
 [bluetooth]# exit
 ```
 
+Now with the `hcitool`.
+
+```shell
+# display local devices
+$ sudo hcitool dev
+```
+
 **Scan for devices**
 
-Now already the cool stuff, you start to analyze what devices are around.
+Now already the cool stuff, you start to analyze what devices are around with `bluetoothctl`.
 
 ```shell
 # enable agent
@@ -81,6 +86,16 @@ Now already the cool stuff, you start to analyze what devices are around.
 - [NEW] means 'found new devices'
 - [CHG] means 'device has changed'
 - [DEL] means 'device deleted'
+
+Scan with the `hcitool`.
+
+```shell
+# scan for remote devices
+$ sudo hcitool scan
+
+# start LE scan
+$ hcitool lescan --duplicates
+```
 
 ### Analysis of Devices
 
@@ -108,6 +123,23 @@ Device E8:38:80:7F:E3:D7 (public)
 
 # stop scan for devices
 [bluetooth]# scan off
+```
+
+Again with the `hcitool`.
+
+```shell
+$ sudo hcitool info E8:38:80:7F:E3:D7
+Requesting information ...
+	BD Address:  E8:38:80:7F:E3:D7
+	OUI Company: Apple, Inc. (E8-38-80)
+	Device Name: root
+	...
+
+$ sudo hcitool leinfo 4D:87:7A:55:2F:31
+Requesting information ...
+	Handle: 64 (0x0040)
+	LMP Version: 4.2 (0x8) LMP Subversion: 0x35f4
+	Manufacturer: Cambridge Silicon Radio (10)
 ```
 
 Wow ... the showed information's are really great. With this information you know already a lot about the device! Store this information and continue with your Bluetooth analysis.
