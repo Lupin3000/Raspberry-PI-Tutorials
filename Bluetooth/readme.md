@@ -15,7 +15,7 @@ Install (_or ensure they are installed_) following packages.
 $ sudo apt update -y && sudo apt upgrade -y
 
 # install optional packages (optional)
-$ sudo apt install -y bluez
+$ sudo apt install -y bluez bluez-hcidump
 ```
 
 ## Some basics first
@@ -62,7 +62,7 @@ Now with the `hcitool`.
 
 ```shell
 # show help (optional)
-$ sudo hcitool --help
+$ hcitool --help
 
 # display local devices
 $ sudo hcitool dev
@@ -187,15 +187,24 @@ Device E8:38:80:7F:E3:D7 not available
 Connect with `gattool`.
 
 ```shell
-# enable interactive session
+# start interactive session
 $ sudo gatttool -b 4D:87:5D:55:2F:31 -I
+
+# connect to LE device
 [4D:87:5D:55:2F:31][LE]> connect
 Attempting to connect to 4D:87:5D:55:2F:31
-...
+
+# show the primary UUIDs
+[4D:87:5D:55:2F:31][LE]> primary
+
+# show all available handles
+[4D:87:5D:55:2F:31][LE]> char-desc
+
+# exit gattool
 [4D:87:5D:55:2F:31][LE]> exit
 ```
 
-## Info
+### Info
 
 Sometimes the connect command does not work (_e.q. speakers_), in such cases you can try to install a GUI and the package `pulseaudio-module-bluetooth`.
 
@@ -206,6 +215,31 @@ Failed to connect: org.bluez.Error.Failed
 
 # install package
 $ sudo apt install -y pulseaudio-module-bluetooth
+```
+
+## Start to dump
+
+The `hcidump` utility allows the monitoring of Bluetooth activity. It provides a disassembly of the Bluetooth traffic.
+
+```shell
+# start LE scan
+$ sudo hcitool lescan
+```
+
+For example with a 2nd SSH connection you can run `hcidump`.
+
+```shell
+# show help (optional)
+$ hcidump --help
+
+# dump data in raw
+$ sudo hcidump --raw
+
+# dump data in ascii
+$ sudo hcidump --ascii
+
+# dump data in ascii and raw
+$ sudo hcidump --ext
 ```
 
 [Go Back](../readme.md)
