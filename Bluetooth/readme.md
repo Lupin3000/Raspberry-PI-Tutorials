@@ -20,7 +20,7 @@ $ sudo apt install -y bluez bluez-hcidump
 
 ## Some basics first
 
-With bluez you have already some common tools available on Raspberry PI - for example `hcitool`, `bluetoothctl` and `gattool`.
+With bluez you have already some common tools available on Raspberry PI - for example `hcitool`, `bluetoothctl`, `sdptool` and `gattool`.
 
 ### Controller
 
@@ -164,6 +164,31 @@ After the scan is stopped, all devices will be deleted soon.
 [bluetooth]# info E8:38:80:7F:E3:D7
 Device E8:38:80:7F:E3:D7 not available
 ```
+
+Dive deeper with `sdptool`.
+
+```shell
+# show help (optional)
+$ sdptool --help
+
+#
+$ sudo sdptool browser E8:38:80:7F:E3:D7
+...
+Service Name: Phonebook
+Service RecHandle: 0x4f49112f
+Service Class ID List:
+  "Phonebook Access - PSE" (0x112f)
+Protocol Descriptor List:
+  "L2CAP" (0x0100)
+  "RFCOMM" (0x0003)
+    Channel: 13
+  "OBEX" (0x0008)
+...
+```
+
+You will see (_with sdptool_) much more information! For example services, channel and protocols. The following services can be discovered.
+
+DID SP DUN LAN FAX OPUSH FTP PRINT HS HSAG HF HFAG SAP PBAP MAP NAP GN PANU HCRP HID KEYB WIIMOTE CIP CTP A2SRC A2SNK AVRCT AVRTG UDIUE UDITE SEMCHLA SR1 SYNCML SYNCMLSERV ACTIVESYNC HOTSYNC PALMOS NOKID PCSUITE NFTP NSYNCML NGAGE APPLE IAP ISYNC GATT 
 
 ### Try to connect
 
