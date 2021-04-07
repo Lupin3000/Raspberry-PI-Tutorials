@@ -1,6 +1,8 @@
 # Setup Raspberry PI (_headless_)
 
-In order to be able to follow the following tutorials better, I would like to quickly show you how to set up the Raspberry PI.
+In order to be able to follow the tutorials better, I would like to quickly show you how to set up the Raspberry PI.
+
+_Note: There are also many other setup options, the one shown here is just a suggestion!_
 
 ## Objective
 
@@ -58,4 +60,4 @@ $ raspi-config
 
 _Note: I activate SSH and set up the Wi-Fi again (_just to ensure_)._
 
-[Go Back](./readme.md)
+[Go Back](../readme.md)
