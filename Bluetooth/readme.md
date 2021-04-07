@@ -61,6 +61,9 @@ $ sudo bluetoothctl
 Now with the `hcitool`.
 
 ```shell
+# show help (optional)
+$ sudo hcitool --help
+
 # display local devices
 $ sudo hcitool dev
 ```
@@ -93,8 +96,14 @@ Scan with the `hcitool`.
 # scan for remote devices
 $ sudo hcitool scan
 
-# start LE scan
-$ hcitool lescan --duplicates
+# scan for remote devices (incl. information and oui)
+$ sudo hcitool scan --info --oui
+
+# start passive LE scan
+$ sudo hcitool lescan --passive
+
+# start active LE scan (don't filter duplicates)
+$ sudo hcitool lescan --duplicates
 ```
 
 ### Analysis of Devices
