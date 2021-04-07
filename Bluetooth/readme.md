@@ -171,7 +171,7 @@ Dive deeper with `sdptool`.
 # show help (optional)
 $ sdptool --help
 
-#
+# show all available services
 $ sudo sdptool browser E8:38:80:7F:E3:D7
 ...
 Service Name: Phonebook
