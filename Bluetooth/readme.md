@@ -222,7 +222,7 @@ $ sudo apt install -y pulseaudio-module-bluetooth
 The `hcidump` utility allows the monitoring of Bluetooth activity. It provides a disassembly of the Bluetooth traffic.
 
 ```shell
-# start LE scan
+# start LE scan (if no connection is established)
 $ sudo hcitool lescan
 ```
 
