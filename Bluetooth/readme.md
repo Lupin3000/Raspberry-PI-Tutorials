@@ -143,7 +143,7 @@ Device E8:38:80:7F:E3:D7 not available
 
 ## Info
 
-Sometimes the connect command does not work (_e.q. speakers_), in such cases you can try to install a GUI and the package `pulseaudio-module-bluetooth.
+Sometimes the connect command does not work (_e.q. speakers_), in such cases you can try to install a GUI and the package `pulseaudio-module-bluetooth`.
 
 ```shell
 ...
