@@ -11,6 +11,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 ## Table of Contents
 
 - **:wrench:Preparation**
+  - [Setup Raspberry PI](./Setup)
   - [Prepare Raspberry PI](./Preparation)
 - **:satellite: Wi-Fi Access Point**
   - [Simple Access Point](./AccessPoint)
