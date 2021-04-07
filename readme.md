@@ -26,7 +26,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
   - [Metasploit](./Metasploit)
   - [BeEF](./BeEF)
 - **:pager: Bluetooth**
-  - will follow soon 
+  - [Bluetooth Basics & Analysis](./Bluetooth)
 - **:gift: Some goodies**
   - will follow soon
 
