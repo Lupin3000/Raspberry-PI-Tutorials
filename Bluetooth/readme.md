@@ -20,7 +20,7 @@ $ sudo apt install -y bluez
 
 ## Some basics first
 
-With bluez you have already some common tools available on Raspberry PI - for example `hcitool` and `bluetoothctl`.
+With bluez you have already some common tools available on Raspberry PI - for example `hcitool`, `bluetoothctl` and `gattool`.
 
 ### Controller
 
@@ -182,6 +182,17 @@ Device E8:38:80:7F:E3:D7 not available
 
 # remove a device
 [bluetooth]# remove [mac address]
+```
+
+Connect with `gattool`.
+
+```shell
+# enable interactive session
+$ sudo gatttool -b 4D:87:5D:55:2F:31 -I
+[4D:87:5D:55:2F:31][LE]> connect
+Attempting to connect to 4D:87:5D:55:2F:31
+...
+[4D:87:5D:55:2F:31][LE]> exit
 ```
 
 ## Info
