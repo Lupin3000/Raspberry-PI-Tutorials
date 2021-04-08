@@ -8,6 +8,8 @@ The aim is to analyze the HTTP traffic from connected STA's. In best case you wi
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)

@@ -8,6 +8,8 @@ The aim of this tutorial is to analyze stations and access points in order to be
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 

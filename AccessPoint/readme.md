@@ -12,6 +12,8 @@ The aim is to create a simple (_open_) access point through 2 Wi-Fi interfaces.
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)

@@ -8,6 +8,8 @@ The aim of this tutorial is to make your daily work easier.
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 
 ## Change the password of user pi

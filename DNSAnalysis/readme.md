@@ -8,6 +8,8 @@ The aim is to analyze the DNS queries from connected STA's and DNS forwards + DN
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)

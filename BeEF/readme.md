@@ -8,6 +8,8 @@ The aim of this tutorial is to set up BeEF on Raspberry PI and to show you where
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)

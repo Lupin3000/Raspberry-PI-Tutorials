@@ -8,6 +8,8 @@ The aim of this tutorial is to learn some Bluetooth basics and to start with the
 
 ## Precondition
 
+You should already have read (_and successful carried out_) the following tutorials.
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 
