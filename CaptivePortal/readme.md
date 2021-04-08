@@ -1,6 +1,6 @@
 # Create a Raspberry PI Captive Portal
 
-After you have set up the Wi-Fi access point on the Raspberry PI, you may also need a Captive Portal. The Captive Portal will be shown to STA's directly after they connected to your Wi-Fi, like in Hotels, Airports, public Hotspots, etc. The problem with this is that people can copy such Captive Portals and gather sensible information (_e.q. login credentials_).
+After you have set up the Wi-Fi access point on the Raspberry PI, you may also need a Captive Portal. The Captive Portal will be shown to STA's directly after they connected to your Wi-Fi, like in Hotels, Airports, public Hotspots, etc. The problem with this is that people can copy such Captive Portals and gather sensible information (_e.g. login credentials_).
 
 ## Objective
 

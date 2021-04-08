@@ -14,7 +14,7 @@ I use [this hardware](https://www.raspberrypi.org/products/raspberry-pi-4-model-
 
 ## Install Raspberry Pi
 
-The easiest and most comfortable installation is with the `Raspberry Pi Imager`. You can download it [here](https://www.raspberrypi.org/software/) and then install it. As soon as the installation is successfully completed, put the SD card into your SD card into your SD card reader and run Raspberry Pi Imager. First, select the OS (_e.q. Raspberry Pi OS Lite_). Second, select the SD card and third press button `Write`. 
+The easiest and most comfortable installation is with the `Raspberry Pi Imager`. You can download it [here](https://www.raspberrypi.org/software/) and then install it. As soon as the installation is successfully completed, put the SD card into your SD card into your SD card reader and run Raspberry Pi Imager. First, select the OS (_e.g. Raspberry Pi OS Lite_). Second, select the SD card and third press button `Write`. 
 
 ![Raspberry Pi Imager](./RaspberryPI_ImageBuilder.jpg)
 

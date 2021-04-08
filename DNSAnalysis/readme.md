@@ -1,6 +1,6 @@
 # DNS Analysis with Raspberry PI
 
-Knowing which domains are being requested, means you knowing on which web pages the sensible information is on (_e.q. what content is from interest, credentials, etc._). It can also be used for further attacks.
+Knowing which domains are being requested, means you knowing on which web pages the sensible information is on (_e.g. what content is from interest, credentials, etc._). It can also be used for further attacks.
 
 ## Objective
 

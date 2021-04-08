@@ -238,7 +238,7 @@ Attempting to connect to 4D:87:5D:55:2F:31
 
 ### Info
 
-Sometimes the connect command does not work (_e.q. speakers_), in such cases you can try to install a GUI and the package `pulseaudio-module-bluetooth`.
+Sometimes the connect command does not work (_e.g. speakers_), in such cases you can try to install a GUI and the package `pulseaudio-module-bluetooth`.
 
 ```shell
 ...
