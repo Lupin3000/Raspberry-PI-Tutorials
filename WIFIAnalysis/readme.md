@@ -28,7 +28,7 @@ $ sudo apt install -y tcpdump wavemon
 
 ## Attention
 
-If you have already set up an [access point](../AccessPoint) and/or a [Captive portal](../CaptivePortal), you should stop them now! In this tutorial we need the `wlan1` interface in the so-called monitor mode. You cannot use the `wlan0 interface from the Raspberry PI for this.
+If you have already set up an [Access Point](../AccessPoint) and/or a [Captive portal](../CaptivePortal), you should stop them now! In this tutorial we need the `wlan1` interface in the so-called monitor mode. You cannot use the `wlan0 interface from the Raspberry PI for this.
 
 ```shell
 # stop nodogsplash service
