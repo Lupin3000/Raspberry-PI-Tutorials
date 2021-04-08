@@ -6,6 +6,8 @@ BeEF (_Browser Exploitation Framework_) is a penetration tool focused on exploit
 
 The aim of this tutorial is to set up BeEF on Raspberry PI and to show you where you could place the `hook.js`.
 
+## Precondition
+
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 - [Simple Access Point](../AccessPoint)
