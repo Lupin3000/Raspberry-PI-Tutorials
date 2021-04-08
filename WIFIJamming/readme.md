@@ -4,7 +4,7 @@ If you have read the previous tutorial [Wi-Fi Analysis](../WIFIAnalysis), you kn
 
 ## Objective
 
-The aim of this tutorial is to speed-up the process that stations will connect to your access point.
+The aim of this tutorial is to speed-up the process that stations will connect to the access point (_which is created in next tutorial_).
 
 ## Precondition
 
@@ -63,7 +63,7 @@ $ sudo ip link set wlan1 up
 
 ## aireplay-ng (Aircrack-ng)
 
-The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focus on `aireplay-ng` only. 
+The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here the focus is on `aireplay-ng` only. 
 
 ```shell
 # show help (optional)
