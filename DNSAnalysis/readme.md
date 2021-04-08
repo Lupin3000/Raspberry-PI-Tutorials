@@ -1,10 +1,16 @@
 # DNS Analysis with Raspberry PI
 
-After the AP has been set up on the Raspberry PI and STA's have connected to it, it is very interesting to know which domains are requested by the clients (_devices_) in our network.
+Knowing which domains are being requested, means you knowing on which web pages the sensible information is on (_e.q. what content is from interest, credentials, etc._). It can also be used for further attacks.
 
 ## Objective
 
-The aim is to analyze the DNS queries from connected STA's, for later actions.
+The aim is to analyze the DNS queries from connected STA's and DNS forwards + DNS cache, so that you know which domains get requested.
+
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
 
 ## Install needed and/or optional packages
 
@@ -18,9 +24,9 @@ $ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim tcpdump
 ```
 
-## tcpdump
+## Analysis with tcpdump
 
-As in a previous tutorial, you can use `tcpdump` to analyze the current DNS traffic.
+As in a previous tutorial [Wi-Fi Analysis](../WIFIAnalysis), you can use `tcpdump` to analyze the current DNS traffic.
 
 ```shell
 # show DNS traffic for interface wlan0
@@ -30,9 +36,9 @@ $ sudo tcpdump -i wlan0 -nn -l udp port 53
 $ sudo tcpdump -i wlan1 -nn -l udp port 53
 ```
 
-With the help of "grep" and other Linux standard tools, a more precise filtering is possible.
+With the help of `grep` and other Linux standard tools, a more precise filtering is possible.
 
-## Dnsmasq log files
+## Analysis of Dnsmasq log files
 
 I hope you remember when and where you configure the DNS log files! The answer is, you did it in the file `/etc/dnsmasq.conf`.
 
@@ -54,7 +60,7 @@ $ sudo cat /tmp/dnsmasq.log
 $ sudo tail -f /tmp/dnsmasq.log
 ```
 
-However, this is a bit cumbersome (depending on the size of the file) and can also be made much easier.
+However, this is a bit cumbersome (_depending on the size of the log file_) and can also be made much easier.
 
 ### Create AWK analysis script
 
