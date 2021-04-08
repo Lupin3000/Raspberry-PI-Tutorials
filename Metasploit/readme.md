@@ -120,7 +120,7 @@ msf6 auxiliary(scanner/http/dir_scanner) > run
 msf6 auxiliary(scanner/http/dir_scanner) > quit
 ```
 
-## The final attack with Metaslpoit and Msfvenom
+## The final attack with Metasploit and Msfvenom
 
 ### Generate some exploits
 
