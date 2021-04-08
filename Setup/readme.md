@@ -6,7 +6,11 @@ _Note: There are also many other setup options, the one shown here is just a sug
 
 ## Objective
 
-The aim of this tutorial is to show the initial setup of your Raspberry PI.
+The aim of this tutorial is to show used hardware, and the initial setup of your Raspberry PI.
+
+## Hardware
+
+I use [this hardware](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb) for all tutorials. For many purposes (_but not all_) you can also use previous versions of the Raspberry PI.
 
 ## Install Raspberry Pi
 
