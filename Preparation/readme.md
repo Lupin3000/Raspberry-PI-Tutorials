@@ -20,6 +20,7 @@ $ passwd
 To figure out if the Raspberry PI is ready and if you can start the SSH connection, simply check the ARP cache of your system. You don't need to make a ping scan!
 
 ```shell
+# output arp cache
 ┌──[lupin@macOS]::[~]
 └─ % arp -a
 ```
@@ -29,9 +30,11 @@ To figure out if the Raspberry PI is ready and if you can start the SSH connecti
 To save some time and to spare your nerves - it's recommended to use the ssh connection login without a password.
 
 ```shell
+# create SSH keys
 ┌──[lupin@macOS]::[~]
 └─ % ssh-keygen -t rsa -b 4096
 
+# show content of public key
 ┌──[lupin@macOS]::[~]
 └─ % cat ~/.ssh/id_rsa.pub
 ```
@@ -56,6 +59,7 @@ Now add the content of your local file `~/.ssh/id_rsa.pub`.
 The IP of your Raspberry PI can change after start/reboot and also the SSH command could be very long. This could be easily changed with a simple SSH configuration file.
 
 ```shell
+# create and modify configuration
 ┌──[lupin@macOS]::[~]
 └─ % vim ~/.ssh/config
 ```
@@ -85,6 +89,7 @@ _Note: Read this [online document](https://www.ssh.com/ssh/config/) to learn mor
 Now you can establish the SSH connection very easily via following the command.
 
 ```shell
+# ssh into Raspberry PI
 ┌──[lupin@macOS]::[~]
 └─ % ssh Raspi
 ```
@@ -92,6 +97,7 @@ Now you can establish the SSH connection very easily via following the command.
 If you know need to copy something (_via SCP_), you can use the host name, too.
 
 ```shell
+# copy file to Raspberry PI
 ┌──[lupin@macOS]::[~]
 └─ % scp <local file> Raspi:/home/pi/
 ```
