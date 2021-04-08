@@ -168,7 +168,7 @@ Content of file `/var/www/html/index.html`.
   <div id="patch">
     <span><!-- placeholder security update --></span>
   </div>
-<script type="text/javascript" src="scripts/script.js"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
 ```

