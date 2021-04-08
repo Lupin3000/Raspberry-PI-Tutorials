@@ -10,12 +10,12 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ## Table of Contents
 
-## **:wrench: Preparation**
+### **:wrench: Preparation**
 
 - [Setup Raspberry PI](./Setup)
 - [Prepare Raspberry PI](./Preparation)
 
-## **:satellite: Wi-Fi**
+### **:satellite: Wi-Fi**
 
 - [Wi-Fi Analysis](./WIFIAnalysis)
 - [Simple Access Point](./AccessPoint)
@@ -27,9 +27,9 @@ The author of this repository (_information, scripts, code_) take no responsibil
 - [Metasploit](./Metasploit)
 - [BeEF](./BeEF)
 
-## **:pager: Bluetooth**
+### **:pager: Bluetooth**
 - [Bluetooth Basics & Analysis](./Bluetooth)
 
-## **:gift: Some goodies**
+### **:gift: Some goodies**
 - will follow soon
 
