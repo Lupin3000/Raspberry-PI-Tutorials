@@ -13,6 +13,7 @@ You should already have read (_and successful carried out_) the following tutori
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)
+- [Wi-Fi Jamming](../WIFIJamming)
 - [Simple Access Point](../AccessPoint)
 - [STA Enumeration](../STAEnumeration)
 

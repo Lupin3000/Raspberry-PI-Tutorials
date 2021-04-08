@@ -18,6 +18,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 ### **:satellite: Wi-Fi**
 
 - [Wi-Fi Analysis](./WIFIAnalysis)
+- [Wi-Fi Jamming](./WIFIJamming)
 - [Simple Access Point](./AccessPoint)
 - [Simple Captive Portal](./CaptivePortal)
 - [STA Enumeration](./STAEnumeration)

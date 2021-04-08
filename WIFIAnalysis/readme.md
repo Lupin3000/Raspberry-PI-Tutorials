@@ -30,7 +30,9 @@ $ sudo apt install -y tcpdump wavemon aircrack-ng
 
 ## Attention
 
-If you have already set up an [Access Point](../AccessPoint) and/or a [Captive portal](../CaptivePortal), you should stop them now! In this tutorial we need the `wlan1` interface in the so-called monitor mode. You cannot use the `wlan0 interface from the Raspberry PI for this.
+> In this tutorial we need the `wlan1` interface in the so-called monitor mode. You cannot use the `wlan0` interface from the Raspberry PI for this.
+
+If you have already set up an [Access Point](../AccessPoint) and/or a [Captive portal](../CaptivePortal), you should stop them now!
 
 ```shell
 # stop nodogsplash service
@@ -166,7 +168,7 @@ Press `F3` key to scan, `F2` to show the histogram, press `F10` key to exit.
 
 _Note: Read this [man page](http://manpages.ubuntu.com/manpages/bionic/man1/wavemon.1.html) to learn more about Wavemon._
 
-## Aircrack-ng
+## airodump-ng (Aircrack-ng)
 
 The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focus on `airodump-ng` only. Please set your interface `wlan1` into monitor mode first (_but no need to specify the channel_)!
 
