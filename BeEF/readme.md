@@ -77,7 +77,7 @@ Read this [Wiki](https://github.com/beefproject/beef/wiki/Configuration) for mor
 $ ./beef
 ```
 
-Open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in the config.yaml_).
+Open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in the config.yaml_). [Here](https://github.com/beefproject/beef/wiki/Interface) you will find a detailed description. 
 
 _Note: If you follow the output inside the terminal, you will see that some other packages are required. Install them if you need them (maybe in second terminal session) and execute the BeEF command again (inside the Browser UI)._
 
