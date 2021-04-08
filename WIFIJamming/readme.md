@@ -76,17 +76,14 @@ $ sudo aireplay-ng -0 0 -a 50:C7:BF:DC:4C:E8 -c E0:B5:2D:EA:18:A7 wlan1
 - `-0` means deauthentication mode
 - `0` means send continuously deauthentication frames (_otherwise you can set a specific number_)
 - `-a [mac address]` means MAC address of the access point
-- `-c [mac address] means MAC address of the station
+- `-c [mac address]` means MAC address of the station
 - `wlan1` means the interface`(_in monitor mode_)
 
-## mdk4
+## MDK4
 
-...
+... in work ...
 
 ```shell
-#
-$
-
 #
 $
 ```
