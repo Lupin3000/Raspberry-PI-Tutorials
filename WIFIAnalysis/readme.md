@@ -61,9 +61,9 @@ $ sudo ip link set wlan1 up
 $ sudo iwconfig wlan1 channel 9
 ```
 
-## Analyze STA's
+## tcpdump
 
-### tcpdump
+### Analyze STA's
 
 To analyze STA's, which do looking for already know access points, you can capture there `probe-req` with tcpdump.
 
@@ -95,9 +95,7 @@ $ sudo tcpdump -i wlan1 -s 0 -l type mgt subtype probe-req | grep -o -P '\(\K[^\
 $ sort STAs.txt | uniq -cd
 ```
 
-## Analyze AP's
-
-### tcpdump
+### Analyze AP's
 
 To analyze access points around you, you can capture `beacon` and/or `probe-resp` with tcpdump.
 
