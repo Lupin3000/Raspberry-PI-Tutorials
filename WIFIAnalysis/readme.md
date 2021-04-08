@@ -168,7 +168,7 @@ _Note: Read this [man page](http://manpages.ubuntu.com/manpages/bionic/man1/wave
 
 ## Aircrack-ng
 
-The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focus on `airodump-ng` only. Please set your interface `wlan1` into monitor mode first!
+The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focus on `airodump-ng` only. Please set your interface `wlan1` into monitor mode first (_but no need to specify the channel_)!
 
 ```shell
 # show help (optional)
