@@ -1,6 +1,6 @@
 # Analyze Wi-Fi with Raspberry PI
 
-Even without a GUI (_no Desktop_) you can very quickly analyze the Wi-Fi environment around you. For this you can also use tools like [Aircrack-ng](https://www.aircrack-ng.org/) or other well-known Linux tools.
+Even without a GUI (_no Desktop_) you can very quickly analyze the Wi-Fi environment around you.
 
 ## Objective
 
@@ -25,7 +25,7 @@ $ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim wireless-tools
 
 # install needed packages
-$ sudo apt install -y tcpdump wavemon
+$ sudo apt install -y tcpdump wavemon aircrack-ng
 ```
 
 ## Attention
@@ -139,7 +139,9 @@ done
 
 ## Wavemon
 
-Wavemon is another awesome Wi-Fi analyzing tool, which is very simple to us. But set back you interface into "managed mode" first!
+Wavemon is another awesome Wi-Fi analyzing tool, which is very simple to us.
+
+_Note: Please set back you interface into "managed mode" first!_
 
 ```shell
 # set interface down
@@ -150,11 +152,39 @@ $ sudo iwconfig wlan1 mode managed
 
 # set interface up
 $ sudo ip link set wlan1 up
+```
+
+Execute Wavemon
+
+```shell
+# show help (optional)
+$ wavemon -h
 
 # start wavemon
 $ sudo wavemon -i wlan1
 ```
 
-Press `F3` key to scan and later press `F10` key to exit.
+Press `F3` key to scan, `F2` to show the histogram, press `F10` key to exit.
+
+_Note: Read this [man page](http://manpages.ubuntu.com/manpages/bionic/man1/wavemon.1.html) to learn more about Wavemon._
+
+## Aircrack-ng
+
+The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focus on `airodump-ng` only. Please set your interface `wlan1` into monitor mode first!
+
+```shell
+# show help (optional)
+$ airodump-ng --help
+
+# run the simplest airodump
+$ sudo airodump-ng -i wlan1
+
+# run more precise airodump
+$ sudo airodump-ng -i wlan1 --manufacturer --wps --ignore-negative-one
+```
+
+Press `CTRL` + `c` keys to stop the scan and exit.
+
+_Note: Read the [online documentation](https://www.aircrack-ng.org/) to get more information._
 
 [Go Back](../readme.md)
