@@ -4,7 +4,7 @@ In the same way as you can collect information (_e.g. from servers_), you can co
 
 ## Objective
 
-The aim of this tutorial is to gather information about OS and services by connected STA's.
+The aim of this tutorial is to gather information about OS and services (_fingerprint_) by connected STA's.
 
 ## Precondition
 
