@@ -6,6 +6,12 @@ Since most traffic nowadays is encrypted, you can try a little trick to bypass t
 
 The aim is to analyze the HTTPS traffic from connected STA's where for example `HSTS` web security policy mechanism or other protections are not in use.
 
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
+
 ## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
@@ -23,9 +29,9 @@ $ sudo apt install -y iptables sslsplit
 
 ## sslsplit
 
-_Note: Read this [document](https://www.roe.ch/SSLsplit) for more information's._
+_Note: Read this [document](https://www.roe.ch/SSLsplit) for more information._
 
-### Create configuration
+### Configure sslsplit
 
 Many online search results end up with a very long command line options for sslsplit, don't do that (_just create your own configuration(s) file(s)_)!
 
@@ -53,7 +59,7 @@ ConnectLog /var/log/sslsplit/connect.log
 ContentLog /var/log/sslsplit/content.log
 
 # Log master keys in SSLKEYLOGFILE format (equivalent to -M option)
-MasterKeyLog /var/log/sslsplit/masterkeys.log
+# MasterKeyLog /var/log/sslsplit/masterkeys.log
 
 # Debug mode run in foreground (equivalent to -D option)
 Debug yes
@@ -73,9 +79,9 @@ Debug yes
 # ProxySpec https ::ffff:c0a8:1 8443
 ```
 
-_Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more information's._
+_Note: read this [manual page](https://mirror.roe.ch/rel/sslsplit/sslsplit-0.5.5.conf.5.txt) for more information._
 
-### Generate self signed certifcate
+### Generate self signed certificate
 
 ```shell
 # show openssl.cnf (optional)
@@ -138,7 +144,7 @@ $ sudo iptables -t nat -A PREROUTING -p tcp --dport 5222 -j REDIRECT --to-ports 
 
 _Note: You could also save the iptables-save, iptables rules, iptables clean-up and iptables-restore as bash script!_
 
-Start sslsplit (_and optional tail_).
+### Start sslsplit
 
 ```shell
 # tail all logfiles (optional)
@@ -151,7 +157,9 @@ $ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P https 192.168.0.1 8443 http 19
 $ sudo sslsplit -f /usr/sslsplit/sslsplit.conf -P ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
 ```
 
-When you are ready press `CTRL` + `c`, restore your iptables rules and start traffic analysis.
+When you are ready press `CTRL` + `c` to stop sslsplit.
+
+### Clean-up iptables rules
 
 ```shell
 # clean iptables
@@ -167,7 +175,11 @@ $ iptables -P OUTPUT ACCEPT
 
 # restore iptables rules
 $ iptables-restore < /usr/sslsplit/rules/saved
+```
 
+### Start traffic analysis
+
+```shell
 # show content.log
 $ sudo cat /var/log/sslsplit/content.log
 
