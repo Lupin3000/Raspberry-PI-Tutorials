@@ -10,6 +10,7 @@ The aim is to analyze the HTTP traffic from connected STA's. In best case you wi
 
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
+- [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
 
 ## Install needed and/or optional packages

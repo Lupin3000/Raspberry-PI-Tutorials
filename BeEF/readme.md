@@ -10,6 +10,7 @@ The aim of this tutorial is to set up BeEF on Raspberry PI and to show you where
 
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
+- [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
 - [DNS Analysis](../DNSAnalysis)
 - [DNS Redirection](../DNSRedirection)

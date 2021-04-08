@@ -10,6 +10,7 @@ The aim of this tutorial is to set up a simple (_open_) captive portal in few mi
 
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
+- [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
 
 ## Install needed and/or optional packages

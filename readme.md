@@ -10,23 +10,26 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ## Table of Contents
 
-- **:wrench: Preparation**
-  - [Setup Raspberry PI](./Setup)
-  - [Prepare Raspberry PI](./Preparation)
-- **:satellite: Wi-Fi Access Point**
-  - [Simple Access Point](./AccessPoint)
-  - [Simple Captive Portal](./CaptivePortal)
-- **:mag: Analysis** 
-  - [Wi-Fi Analysis](./WIFIAnalysis)
-  - [DNS Analysis](./DNSAnalysis)
-  - [HTTP Analysis](./HTTPAnalysis)
-  - [HTTPS Analysis](./HTTPSAnalysis)
-- **:pill: The Red Pill**
-  - [DNS Redirection](./DNSRedirection)
-  - [Metasploit](./Metasploit)
-  - [BeEF](./BeEF)
-- **:pager: Bluetooth**
-  - [Bluetooth Basics & Analysis](./Bluetooth)
-- **:gift: Some goodies**
-  - will follow soon
+## **:wrench: Preparation**
+
+- [Setup Raspberry PI](./Setup)
+- [Prepare Raspberry PI](./Preparation)
+
+## **:satellite: Wi-Fi**
+
+- [Wi-Fi Analysis](./WIFIAnalysis)
+- [Simple Access Point](./AccessPoint)
+- [Simple Captive Portal](./CaptivePortal)
+- [DNS Analysis](./DNSAnalysis)
+- [HTTP Analysis](./HTTPAnalysis)
+- [HTTPS Analysis](./HTTPSAnalysis)
+- [DNS Redirection](./DNSRedirection)
+- [Metasploit](./Metasploit)
+- [BeEF](./BeEF)
+
+## **:pager: Bluetooth**
+- [Bluetooth Basics & Analysis](./Bluetooth)
+
+## **:gift: Some goodies**
+- will follow soon
 

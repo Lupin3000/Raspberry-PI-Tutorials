@@ -10,6 +10,7 @@ The aim is to analyze the HTTPS traffic from connected STA's where for example `
 
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
+- [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
 
 ## Install needed and/or optional packages

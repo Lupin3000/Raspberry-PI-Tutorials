@@ -10,6 +10,7 @@ The aim of this tutorial is to set up quickly a simple DNS redirection.
 
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
+- [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
 - [DNS Analysis](../DNSAnalysis)
 
