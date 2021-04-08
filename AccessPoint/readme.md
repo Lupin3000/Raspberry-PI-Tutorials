@@ -1,16 +1,19 @@
 # Create a Raspberry PI Access Point
 
-With the Raspberry PI you can create a Wi-Fi access point in a very short time. If required, this is also possible with 2 Wi-Fi interfaces.
-
-_Note: In this tutorial I am using a Raspberry PI 4 (Raspberry Pi OS Lite - Kernel version: 5.10) and an ALFA USB adapter (AWUS036NHA). It is also possible to use similar OS and/or devices!_
+With the Raspberry PI you can create a Wi-Fi access point (_AP_) in a very short time. It is also known as the Evil Twin or Rogue access point, which mimics legitimate access points.
 
 ## Objective
 
-The aim is to create a simple (_open_) access point through 2 WiFi interfaces.
+The aim is to create a simple (_open_) access point through 2 Wi-Fi interfaces.
 
 - eth0 (_not used in this tutorial, but simply possible_)
-- wlan0 (_Raspberry as STA internet from Gateway_)
+- wlan0 (_Raspberry as STA, internet from Gateway_)
 - wlan1 (_provide AP for STA's with network 192.168.0.1/24_)
+
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
 
 ## Install needed and/or optional packages
 
@@ -49,11 +52,11 @@ static ip_address=192.168.0.1/24
 # don't call the wpa_supplicant hook
 nohook wpa_supplicant
 
-# don't send DHCP requests to wlan0 interface (optional)
+# don't send DHCP requests to interface (optional)
 # denyinterfaces eth0
 ```
 
-_Note: read this [manual page](https://www.daemon-systems.org/man/dhcpcd.8.html) for more informations._
+_Note: read this [manual page](https://www.daemon-systems.org/man/dhcpcd.8.html) for more information._
 
 Restart and test the dhcpcd service.
 
@@ -95,7 +98,7 @@ log-queries
 log-dhcp
 log-facility=/tmp/dnsmasq.log
 
-# DNS server
+# upstream DNS server addresses
 server=8.8.8.8
 
 # do not read hosts file (optional)
@@ -108,9 +111,9 @@ server=8.8.8.8
 # cache-size=150
 ```
 
-_Note: read this [manual page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) for more informations._
+_Note: read this [manual page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) for more information._
 
-Restart and test the dnsmasq service.
+Test and restart the dnsmasq service.
 
 ```shell
 # verify dnsmasq configuration (optional)
@@ -180,7 +183,7 @@ macaddr_acl=0
 ignore_broadcast_ssid=0
 ```
 
-_Note: read this [manual page](https://nxmnpg.lemoda.net/8/hostapd) for more information's._
+_Note: read this [manual page](https://nxmnpg.lemoda.net/8/hostapd) for more information._
 
 Change permissions, test and modify hostapd init script.
 
@@ -250,7 +253,7 @@ $ sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 $ sudo vim /etc/rc.local
 ```
 
-Add restore iptables commands to run on the startup (_add before `exit 0`_).
+Add restore iptables commands to run on the startup (_add before exit 0_).
 
 ```shell
 #!/bin/sh -e
@@ -290,17 +293,20 @@ $ sudo reboot
 If something don't work, following commands will help. Also check your configuration files again! Sometimes errors creep into the IP addresses.
 
 ```shell
+# show IP addresses of specific interfaces
 $ ip -4 addr show dev wlan0
 $ ip -4 addr show dev wlan1
 
-$ iwconfig
+
 $ iw phy phy0 info
 $ iw phy phy1 info
 
+# show route
 $ route
 # or
 $ ip route list
 
+# show status of specific services
 $ systemctl status hostapd
 $ ps ax | grep hostapd
 
@@ -313,6 +319,6 @@ $ ps ax | grep dhcpcd
 
 ## Additional
 
-If you don't have the time, take a look at [RaspAP](https://raspap.com). It does more or less the same thing, with some more features. Please also note that the tutorial did not go into more depth on security (_e.g. OS hardening, firewall, etc._)!
+Please also note that the tutorial did not go into more depth on security (_e.g. OS hardening, firewall, etc._)!
 
 [Go Back](../readme.md)

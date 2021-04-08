@@ -1,14 +1,16 @@
 # Create a Raspberry PI Captive Portal
 
-After you have set up the Wi-Fi [access point](../AccessPoint) on the Raspberry PI, you may also need a Captive Portal. Here are instructions for doing this. These steps can also be completed in a few minutes.
-
-## Prerequisite
-
-You should already have set up and started the Wi-Fi access point.
+After you have set up the Wi-Fi access point on the Raspberry PI, you may also need a Captive Portal. The Captive Portal will be shown to STA's directly after they connected to your Wi-Fi, like in Hotels, Airports, public Hotspots, etc. The problem with this is that people can copy such Captive Portals and gather sensible information (_e.q. login credentials_).
 
 ## Objective
 
-The aim of this tutorial is to set up a simple (_open_) captive portal.
+The aim of this tutorial is to set up a simple (_open_) captive portal in few minutes and to show how you can modify the specific web pages.
+
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
 
 ## Install needed and/or optional packages
 
@@ -23,7 +25,11 @@ $ sudo apt install -y vim tree
 
 # install needed packages
 $ sudo apt install -y git build-essential libmicrohttpd-dev
+```
 
+## Install NoDogSplash
+
+```shell
 # change into home directory
 $ cd ~
 
@@ -39,6 +45,8 @@ $ make
 # run make and install
 $ sudo make install
 ```
+
+_Note: read this [documentation pages](https://nodogsplashdocs.readthedocs.io/en/stable/) for more information._
 
 ## Modify NoDogSplash
 
@@ -74,8 +82,6 @@ RedirectURL https://google.com
 # Max clients
 MaxClients 100
 ```
-
-_Note: read this [documentation pages](https://nodogsplashdocs.readthedocs.io/en/stable/) for more information's._
 
 Now you modify `/etc/nodogsplash/htdocs/splash.html` and `/etc/nodogsplash/htdocs/status.html`. If you don't like to provide your own content now, you can skip this step.
 
@@ -150,6 +156,7 @@ $ sudo systemctl status nodogsplash
 If something don't work, following commands will help. Also check your configuration files again! Sometimes errors creep into the IP addresses.
 
 ```shell
+# show status of service
 $ systemctl status nodogsplash
 $ ps ax | grep nodogsplash
 ```
