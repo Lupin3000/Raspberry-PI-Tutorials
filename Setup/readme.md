@@ -6,13 +6,20 @@ _Note: There are also many other setup options, the one shown here is just a sug
 
 ## Objective
 
-The aim of this tutorial is to show the initial setup.
+The aim of this tutorial is to show the initial setup of your Raspberry PI.
 
 ## Install Raspberry Pi
 
 The easiest and most comfortable installation is with the `Raspberry Pi Imager`. You can download it [here](https://www.raspberrypi.org/software/) and then install it. As soon as the installation is successfully completed, put the SD card into your SD card into your SD card reader and run Raspberry Pi Imager. First, select the OS (_e.q. Raspberry Pi OS Lite_). Second, select the SD card and third press button `Write`. 
 
 ![Raspberry Pi Imager](./RaspberryPI_ImageBuilder.jpg)
+
+> **Raspberry Pi OS Lite**<br>
+Release date: March 4th 2021<br>
+Kernel version: 5.10<br>
+Size: 1175 MB
+
+_Note: In the following tutorials, I do as first step always an update/upgrade. You should also keep your system up-2-date._
 
 ## Enable SSH
 
@@ -63,6 +70,6 @@ $ raspi-config
 
 ![raspi-config](./raspi-config.jpg)
 
-_Note: I activate SSH and set up the Wi-Fi again (_just to ensure_)._
+_Note: Please activate SSH and set up the Wi-Fi again (_just to ensure_)._
 
 [Go Back](../readme.md)
