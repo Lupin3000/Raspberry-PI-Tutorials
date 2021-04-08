@@ -20,6 +20,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 - [Wi-Fi Analysis](./WIFIAnalysis)
 - [Simple Access Point](./AccessPoint)
 - [Simple Captive Portal](./CaptivePortal)
+- [STA Enumeration](./STAEnumeration)
 - [DNS Analysis](./DNSAnalysis)
 - [HTTP Analysis](./HTTPAnalysis)
 - [HTTPS Analysis](./HTTPSAnalysis)

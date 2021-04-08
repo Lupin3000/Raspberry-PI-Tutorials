@@ -14,8 +14,12 @@ You should already have read (_and successful carried out_) the following tutori
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
+- [STA Enumeration](../STAEnumeration)
 - [DNS Analysis](../DNSAnalysis)
+- [HTTP Analysis](../HTTPAnalysis)
+- [HTTPS Analysis](../HTTPSAnalysis)
 - [DNS Redirection](../DNSRedirection)
+- [Metasploit](../Metasploit)
 
 ## Install needed and/or optional packages
 

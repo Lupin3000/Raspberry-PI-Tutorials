@@ -14,6 +14,9 @@ You should already have read (_and successful carried out_) the following tutori
 - [Prepare Raspberry PI](../Preparation)
 - [Wi-Fi Analysis](../WIFIAnalysis)
 - [Simple Access Point](../AccessPoint)
+- [STA Enumeration](../STAEnumeration)
+- [DNS Analysis](../DNSAnalysis)
+- [HTTP Analysis](../HTTPAnalysis)
 
 ## Install needed and/or optional packages
 
