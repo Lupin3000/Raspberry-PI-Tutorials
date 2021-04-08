@@ -19,6 +19,7 @@ The easiest and most comfortable installation is with the `Raspberry Pi Imager`.
 To enable SSH on headless Raspberry PI, simply create the (_empty_) file named `ssh`, into the boot partition of the SD card.
 
 ```shell
+# create empty file
 ┌──[lupin@macOS]::[~]
 └─ % touch /Volumes/boot/ssh
 ```
@@ -28,6 +29,7 @@ To enable SSH on headless Raspberry PI, simply create the (_empty_) file named `
 Similar to SSH you also can set up already the Wi-Fi (_as STA_). Only difference is that this configuration `wpa_supplicant.conf`_ file needs some content.
 
 ```shell
+# add and modify file
 ┌──[lupin@macOS]::[~]
 └─ % vim /Volumes/boot/wpa_supplicant.conf
 ```
@@ -48,6 +50,7 @@ network={
 Unmount the SD card, plug into Raspberry PI and start up the device. After the start, connect with SSH (_user: pi and password: raspberry_) and change to user `root`. As root run the command `raspi-config` and finish your setup.
 
 ```shell
+# ssh connection to Raspberry PI
 ┌──[lupin@macOS]::[~]
 └─ % ssh pi@raspberry.local
 
