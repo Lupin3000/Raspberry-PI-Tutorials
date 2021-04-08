@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-### Why this repository?
+### :question: Why this repository?
 
 This documentation is for all peoples which do use a Raspberry PI (_and want to learn something_), using the Internet (_to get more sensible_) or are simply interested into topic of Cyber Security. Of course, you could buy something like a [WiFi Pineapple](https://www.hak5.org) or start directly with other Linux Distributions (_like Kali Linux, Parrot OS, etc._), but I personally do believe you learn much more if you do all by your self. In addition, the costs and the time required are very low - but the knowledge is very valuable.
 
