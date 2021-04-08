@@ -63,6 +63,8 @@ $ sudo ip link set wlan1 up
 $ sudo iwconfig wlan1 channel 9
 ```
 
+_Note: Read this [Wikipedia article](https://en.wikipedia.org/wiki/Monitor_mode) to get more information._
+
 ## tcpdump
 
 ### Analyze STA's
@@ -170,7 +172,7 @@ _Note: Read this [man page](http://manpages.ubuntu.com/manpages/bionic/man1/wave
 
 ## airodump-ng (Aircrack-ng)
 
-The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focus on `airodump-ng` only. Please set your interface `wlan1` into monitor mode first (_but no need to specify the channel_)!
+The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here the focus is on `airodump-ng` only. Please set your interface `wlan1` into monitor mode first (_but no need to specify the channel_)!
 
 ```shell
 # show help (optional)

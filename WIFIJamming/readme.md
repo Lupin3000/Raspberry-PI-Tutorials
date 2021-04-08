@@ -61,6 +61,8 @@ $ sudo iwconfig wlan1 mode monitor
 $ sudo ip link set wlan1 up
 ```
 
+_Note: Read this [Wikipedia article](https://en.wikipedia.org/wiki/Monitor_mode) to get more information._
+
 ## aireplay-ng (Aircrack-ng)
 
 The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here the focus is on `aireplay-ng` only. 
