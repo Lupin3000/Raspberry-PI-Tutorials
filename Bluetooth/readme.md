@@ -6,6 +6,11 @@ The Raspberry PI already comes with a Bluetooth device. This is very good becaus
 
 The aim of this tutorial is to learn some Bluetooth basics and to start with the Bluetooth analysis.
 
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+
 ## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
