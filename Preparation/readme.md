@@ -6,6 +6,10 @@ The content of this document is not an obligation but a recommendation.
 
 The aim of this tutorial is to make your daily work easier.
 
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+
 ## Change the password of user pi
 
 Everyone knows the default password `raspberry` of the `pi` user, so one of your first action should be to change it!
