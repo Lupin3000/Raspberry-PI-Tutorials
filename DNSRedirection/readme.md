@@ -6,6 +6,13 @@ Since Dnsmasq is already running on the Raspberry PI, it is very easy to forward
 
 The aim of this tutorial is to set up quickly a simple DNS redirection.
 
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
+- [DNS Analysis](../DNSAnalysis)
+
 ## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
@@ -36,6 +43,8 @@ $ sudo systemctl stop nodogsplash.service
 
 After successful installation the web server is already started, and you can visit with your browser the "Placeholder page" via `http://raspberrypi.local` or `http://<ip>`. But you should re-configure some default settings first.
 
+### Configure lighttpd
+
 ```shell
 # show lighttpd.conf (optional)
 $ sudo cat /etc/lighttpd/lighttpd.conf
@@ -60,10 +69,18 @@ $ sudo usermod -G www-data -a pi
 
 # change permissions recursive
 $ sudo chmod -R 775 /var/www/html
+```
 
+### Restart lighttpd
+
+```shell
 # reload lighttpd
 $ sudo service lighttpd force-reload
+```
 
+## Create the fake web page
+
+```shell
 # create index.html
 $ vim /var/www/html/index.html
 ```
@@ -87,7 +104,9 @@ The content of `/var/www/html/index.html`.
 
 Open again `http://raspberrypi.local` inside your browser, you should see now the content of `index.html`.
 
-## Dnsmasq
+## Reconfigure Dnsmasq
+
+### Use the hosts file
 
 There are various options with Dnsmasq to redirect DNS requests. The real simplest one is via `/etc/hosts`. But you have to check again whether this file is read by Dnsmasq. Check the configuration for this `/etc/dnsmasq.conf`!
 
@@ -110,6 +129,8 @@ Example entry.
 ```
 
 _Note: If you have already called up the domain, you can now wait a little or delete the DNS cache. Otherwise, the real website will still be displayed!_
+
+### Use the addn-hosts
 
 Another way to do this attack with Dnsmasq is as follows.
 
