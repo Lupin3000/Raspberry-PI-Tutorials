@@ -30,7 +30,9 @@ $ sudo apt install -y vim net-tools wireless-tools
 $ sudo apt install -y iptables dhcpcd5 dnsmasq hostapd
 ```
 
-## Modify dhcpcd
+## dhcpcd
+
+### Configure dhcpcd
 
 ```shell
 # backup default dhcpcd configuration (optional)
@@ -58,7 +60,7 @@ nohook wpa_supplicant
 
 _Note: read this [manual page](https://www.daemon-systems.org/man/dhcpcd.8.html) for more information._
 
-Restart and test the dhcpcd service.
+### Restart the dhcpcd service.
 
 ```shell
 # restart dhcpcd service
@@ -68,7 +70,9 @@ $ sudo systemctl restart dhcpcd
 $ sudo systemctl status dhcpcd
 ```
 
-## Modify Dnsmasq
+## Dnsmasq
+
+### Configure Dnsmasq
 
 ```shell
 # backup default dnsmasq configuration (optional)
@@ -113,7 +117,7 @@ server=8.8.8.8
 
 _Note: read this [manual page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) for more information._
 
-Test and restart the dnsmasq service.
+### Test and restart the dnsmasq service.
 
 ```shell
 # verify dnsmasq configuration (optional)
@@ -136,7 +140,9 @@ You can read dnsmasq log files (_if enabled_), later if everything works.
 $ sudo tail -f /tmp/dnsmasq.log
 ```
 
-## Modify Hostapd
+## Hostapd
+
+### Configure Hostapd
 
 ```shell
 # create hostapd configuration
@@ -205,7 +211,7 @@ RUN_DAEMON=yes
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
 
-Start and test the hostapd service.
+### Start and test the hostapd service.
 
 ```shell
 # unmasking hostapd service
@@ -221,7 +227,7 @@ $ sudo systemctl enable hostapd
 $ sudo systemctl status hostapd
 ```
 
-## Modify Routing and NAT
+## Configure Routing and NAT
 
 ```shell
 # backup default sysctl configuration (optional)
