@@ -27,7 +27,9 @@ $ sudo apt install -y vim tree
 $ sudo apt install -y git build-essential libmicrohttpd-dev
 ```
 
-## Install NoDogSplash
+## NoDogSplash
+
+### Install NoDogSplash
 
 ```shell
 # change into home directory
@@ -48,7 +50,7 @@ $ sudo make install
 
 _Note: read this [documentation pages](https://nodogsplashdocs.readthedocs.io/en/stable/) for more information._
 
-## Modify NoDogSplash
+### Configure NoDogSplash
 
 ```shell
 # backup default nodogsplash configuration (optional)
@@ -135,7 +137,7 @@ The example content for `status.html`.
 </html>
 ```
 
-Start and test the nodogsplash service.
+### Start NoDogSplash
 
 ```shell
 # copy service file into /lib/systemd/system

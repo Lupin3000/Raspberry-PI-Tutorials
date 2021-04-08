@@ -60,7 +60,7 @@ nohook wpa_supplicant
 
 _Note: read this [manual page](https://www.daemon-systems.org/man/dhcpcd.8.html) for more information._
 
-### Restart the dhcpcd service.
+### Restart dhcpcd
 
 ```shell
 # restart dhcpcd service
@@ -117,7 +117,7 @@ server=8.8.8.8
 
 _Note: read this [manual page](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) for more information._
 
-### Test and restart the dnsmasq service.
+### Test and restart Dnsmasq
 
 ```shell
 # verify dnsmasq configuration (optional)
@@ -211,7 +211,7 @@ RUN_DAEMON=yes
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
 
-### Start and test the hostapd service.
+### Start Hostapd
 
 ```shell
 # unmasking hostapd service
