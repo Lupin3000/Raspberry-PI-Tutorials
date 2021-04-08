@@ -4,7 +4,13 @@ Even today there are still a lot of websites that only use HTTP. That is very go
 
 ## Objective
 
-The aim is to analyze the HTTP traffic from connected STA's.
+The aim is to analyze the HTTP traffic from connected STA's. In best case you will be able to get some login credentials.
+
+## Precondition
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
 
 ## Install needed and/or optional packages
 
@@ -20,7 +26,7 @@ $ sudo apt install -y tcpdump httpry
 
 ## tcpdump
 
-As in a previous tutorial, you can use `tcpdump` to analyze the current HTTP traffic.
+As in a previous tutorials [Wi-Fi Analysis](../WIFIAnalysis) and [DNS Analysis](../DNSAnalysis), you can use `tcpdump` + `egrep` to analyze the current HTTP traffic.
 
 ```shell
 # show HTTP User Agent and Hosts
