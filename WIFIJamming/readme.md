@@ -70,7 +70,7 @@ The Aircrack-ng suite includes many tools to assess Wi-Fi networks. Here we focu
 $ aireplay-ng --help
 
 # start deauthentication attack
-$ sudo aireplay-ng -0 0 -a 50:C7:BF:DC:4C:E8 -c E0:B5:2D:EA:18:A7 wlan1
+$ sudo aireplay-ng -0 0 -a [mac address] -c [mac address] wlan1
 ```
 
 - `-0` means deauthentication mode
