@@ -231,6 +231,16 @@ $ sudo systemctl enable hostapd
 $ sudo systemctl status hostapd
 ```
 
+The default log location is `/var/log/syslog`.
+
+```shell
+# read log file (optional)
+$ sudo tail -f /var/log/syslog
+
+# read log file and pipe through grep (optional)
+$ sudo tail -f /var/log/syslog | grep hostapd
+```
+
 ## Configure Routing and NAT
 
 ```shell
