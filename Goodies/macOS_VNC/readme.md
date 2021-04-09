@@ -60,6 +60,4 @@ Authentication=VncAuth
 
 To start the VNC connection, simply press `command` and `space` keys. Type `screen Sharing` and hit `ENTER`. Insert the IP of your Raspberry PI and press button `Connect`. At the last step insert the password and continue.
 
-
-
-
+[Go Back](../../readme.md)
