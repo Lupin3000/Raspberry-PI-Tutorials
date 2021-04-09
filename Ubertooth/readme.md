@@ -81,4 +81,44 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
+### Firmware
+
+$ lsusb | grep Ubertooth
+Bus 001 Device 014: ID 1d50:6002 OpenMoko, Inc. Ubertooth One
+
+$ ubertooth-util -v
+Firmware version: 2015-10-R1 (API:1.01)
+
+$ cd /home/pi/ubertooth-2020-12-R1/ubertooth-one-firmware-bin
+
+$ sudo ubertooth-dfu -d bluetooth_rxtx.dfu -r
+Switching to DFU mode...
+Checking firmware signature
+........................................
+........................................
+........................................
+........
+control message unsupported
+
+$ ubertooth-util -r
+
+$ sudo ubertooth-dfu -d bluetooth_rxtx.dfu -r
+Switching to DFU mode...
+Checking firmware signature
+........................................
+........................................
+........................................
+........
+control message unsupported
+
+$ sudo ubertooth-util -vV
+Firmware version: 2020-12-R1 (API:1.07)
+ubertooth 2020-12-R1 (mikeryan@steel) Fri Dec 25 13:55:05 PST 2020
+
+
+
+
+
+
+
 [Go Back](../readme.md)
