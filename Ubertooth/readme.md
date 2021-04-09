@@ -1,4 +1,4 @@
-#
+# Ubertooth One
 
 ...
 
@@ -51,7 +51,9 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-## Install Ubertooth tools
+## Ubertooth
+
+### Install Ubertooth tools
 
 ...
 
@@ -81,27 +83,36 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-### Firmware
+### Ubertooth Firmware update
 
+...
+
+```shell
+# list USB devices (optional)
 $ lsusb | grep Ubertooth
 Bus 001 Device 014: ID 1d50:6002 OpenMoko, Inc. Ubertooth One
 
+# show current version
 $ ubertooth-util -v
 Firmware version: 2015-10-R1 (API:1.01)
 
-$ cd /home/pi/ubertooth-2020-12-R1/ubertooth-one-firmware-bin
+# change into home directory
+$ cd ~
 
+# change directory
+$ cd ubertooth-2020-12-R1/ubertooth-one-firmware-bin
+
+# run firmware update
 $ sudo ubertooth-dfu -d bluetooth_rxtx.dfu -r
-Switching to DFU mode...
-Checking firmware signature
-........................................
-........................................
-........................................
-........
-control message unsupported
+```
 
+I've got an error `control message unsupported`.
+
+```shell
+# re-attach device
 $ ubertooth-util -r
 
+# execute firmware update again
 $ sudo ubertooth-dfu -d bluetooth_rxtx.dfu -r
 Switching to DFU mode...
 Checking firmware signature
@@ -111,14 +122,16 @@ Checking firmware signature
 ........
 control message unsupported
 
+# show version
 $ sudo ubertooth-util -vV
 Firmware version: 2020-12-R1 (API:1.07)
 ubertooth 2020-12-R1 (mikeryan@steel) Fri Dec 25 13:55:05 PST 2020
+```
 
+All good ;) ... I could really confirm that the firmware update was successful.
 
+### Scan with Ubertooth
 
-
-
-
+...
 
 [Go Back](../readme.md)
