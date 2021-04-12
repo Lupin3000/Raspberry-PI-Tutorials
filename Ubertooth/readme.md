@@ -6,6 +6,14 @@ To work with Ubertooth One on the Raspberry PI is fucking awesome. With this com
 
 The aim of this tutorial is to help with the installation, the firmware update and to show some scan/sniff commands.
 
+## Precondition
+
+You should already have read (_and successful carried out_) the following tutorials.
+
+- [Setup Raspberry PI](../Setup)
+- [Prepare Raspberry PI](../Preparation)
+- [Bluetooth Basics & Analysis](../Bluetooth)
+
 ## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
