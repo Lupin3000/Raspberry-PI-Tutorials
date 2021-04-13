@@ -1,6 +1,6 @@
 # Python Station Scan (Scapy)
 
-With Python, you can also evaluate probe requests. All you need is the Scapy library, and some Python code. I developed this Python script for my own station analysis. If you like it, you can freely use it and further develop it. In addition, there is also a small bash script which helps you to set the monitor mode for the respective interface.
+With Python, you can also evaluate probe requests. All you need is the Scapy library, and some Python code. I developed this Python script for my own station analysis. If you like it, you can freely use it and further develop it. In addition, there is also a small [bash script](../BashMonitorMode) which helps you to set the monitor mode for the respective interface.
 
 ## Objective
 
@@ -21,14 +21,14 @@ $ sudo apt install -y python3-pip curl
 $ sudo pip3 install scapy
 ```
 
-## Download and prepare Script
+## Download and prepare all scripts
 
 ```shell
 # change into home directory
 $ cd ~
 
 # download bash script
-$ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Goodies/PythonStationScan/monitor-mode.sh -o monitor-mode.sh
+$ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Goodies/BashMonitorMode/monitor-mode.sh -o monitor-mode.sh
 
 # download python script
 $ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Goodies/PythonStationScan/StationScan.py -o StationScan.py
@@ -41,6 +41,9 @@ $ chmod u+x StationScan.py
 ## Enable Monitor Mode
 
 ```shell
+# show help (optional)
+$ ./monitor-mode.sh -h
+
 # enable monitor mode
 $ sudo ./monitor-mode -i wlan1
 ```
@@ -49,7 +52,7 @@ $ sudo ./monitor-mode -i wlan1
 
 ```shell
 # show help (optional)
-$ sudo ./StationScan.py --help
+$ ./StationScan.py --help
 
 # scan stations (incl. hidden SSID)
 $ sudo ./StationScan.py wlan1
