@@ -36,3 +36,4 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ### **:gift: Some goodies**
 - [macOS VNC](./Goodies/macOS_VNC)
+- [Python station scan](./Goodies/PythonStationScan)
