@@ -4,7 +4,7 @@ import argparse
 import datetime
 import signal
 from os import system
-from scapy.layers.dot11 import Dot11ProbeReq, Dot11Elt, sniff, RadioTap
+from scapy.layers.dot11 import Dot11ProbeReq, Dot11Elt, RadioTap, sniff
 from sys import exit
 from threading import Thread
 from time import sleep
@@ -12,7 +12,7 @@ from time import sleep
 
 def keyboard_interrupt_handler(interrupt_signal, frame):
     print("\nScan stopped")
-    print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
+    # print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
     exit(1)
 
 
@@ -26,7 +26,7 @@ def change_channel():
         sleep(0.5)
 
 
-def evaluate_sniffing_packet_sta(packet):
+def evaluate_sta_packet(packet):
     global filter_results
     print_out = True
 
@@ -62,11 +62,11 @@ def run_app():
     description = 'Station scanner for 2.4 GHz range'
     epilog = 'The author of this code take no responsibility for your use or misuse'
     parser = argparse.ArgumentParser(prog='StationScan.py', description=description, epilog=epilog)
-    parser.add_argument('interface', help='Your interface in monitor mode')
-    parser.add_argument('--filter', help='Do not show hidden SSID searches', default=False, action='store_true')
+    parser.add_argument('interface', help='your interface in monitor mode')
+    parser.add_argument('--filter', help='do not show hidden SSID searches', default=False, action='store_true')
     args = parser.parse_args()
 
-    if len(args.interface) < 1:
+    if len(args.interface.strip()) < 1:
         print('You did not provide any interface?')
         exit(1)
     else:
@@ -85,7 +85,7 @@ def run_app():
     print("\n{:<22} {:<20} {:<5} {}".format("Time", "MAC Address", "dBm", "SSID"))
     print("-" * 85)
 
-    sniff(prn=evaluate_sniffing_packet_sta, iface=interface)
+    sniff(prn=evaluate_sta_packet, iface=interface)
 
 
 if __name__ == "__main__":
