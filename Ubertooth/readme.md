@@ -160,9 +160,46 @@ ubertooth 2020-12-R1 (mikeryan@steel) Fri Dec 25 13:55:05 PST 2020
 
 All good ;) ... I could really confirm that the firmware update was successful. [Here](https://github.com/greatscottgadgets/ubertooth/wiki/Firmware) the detailed description.
 
+### Bluetooth Address Structure
+
+The Bluetooth address consists of three parts: `NAP`, `UAP` and `LAP`.
+
+![Essential Bluetooth](./essential_bluetooth.jpg)
+
+- The NAP (_16 bits_) value is used in Frequency Hopping Synchronization frames
+- The UAP (_8 bits_) value is used for seeding in various Bluetooth specification algorithms
+  - NAP & UAP = OUI (_Organizationally Unique Identifier_)
+- The LAP (_24 bits_) value uniquely identifies a Bluetooth device as part of the Access Code in every transmitted frame
+
 ### Scan with Ubertooth
 
 Here now a few possible scanner/sniffer option examples.
+
+```shell
+# show help (optional)
+$ ubertooth-scan -h
+
+# discover devices and perform Inquiry Scan
+$ ubertooth-scan
+```
+
+#### Ubertooth Spectrum Analyzer
+
+```shell
+# show help (optional)
+$ ubertooth-specan-ui -h
+
+# run scan (only via GUI)
+$ ubertooth-specan-ui
+
+# show help (optional)
+$ ubertooth-specan -h
+
+# run scan (without GUI)
+$ ubertooth-specan
+```
+
+#### Intercepting Lower Address Part (LAP)
 
 ```shell
 # show help (optional)
@@ -177,27 +214,13 @@ $ ubertooth-rx -l [lap]
 # calculate clock and follow piconet
 $ ubertooth-rx -l [lap] -u [uap]
 
-# survey mode: discover all LAPs+UAPs for 20 seconds
+# discover all LAP + UAP for 20 seconds
 $ ubertooth-rx -z -t 20
+```
 
-# show help (optional)
-$ ubertooth-scan -h
+#### Low Energy sniffing mode (BLE)
 
-# discover devices and perform Inquiry Scan
-$ ubertooth-scan
-
-# show help (optional)
-$ ubertooth-specan-ui -h
-
-# run scan (only via GUI)
-$ ubertooth-specan-ui
-
-# show help (optional)
-$ ubertooth-specan -h
-
-# run scan (without GUI)
-$ ubertooth-specan
-
+```shell
 # show help (optional)
 $ ubertooth-btle -h
 

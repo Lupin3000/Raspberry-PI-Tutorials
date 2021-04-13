@@ -216,11 +216,17 @@ DID SP DUN LAN FAX OPUSH FTP PRINT HS HSAG HF HFAG SAP PBAP MAP NAP GN PANU HCRP
 [bluetooth]# remove [mac address]
 ```
 
-Connect with `gattool`.
+Connect with `gatttool` for BLE.
 
 ```shell
 # start interactive session
 $ sudo gatttool -b 4D:87:5D:55:2F:31 -I
+
+# start interactive session (with random address)
+$ sudo gatttool -t random -b 4D:87:5D:55:2F:31 -I
+
+# show help (optional)
+[4D:87:5D:55:2F:31][LE]> help
 
 # connect to LE device
 [4D:87:5D:55:2F:31][LE]> connect
@@ -232,9 +238,19 @@ Attempting to connect to 4D:87:5D:55:2F:31
 # show all available handles
 [4D:87:5D:55:2F:31][LE]> char-desc
 
+# executed command
+[4D:87:5D:55:2F:31][LE]> char-write-cmd 0x001 1234567890
+
+# disconnect from LE device
+[4D:87:5D:55:2F:31][LE]> disconnect
+
 # exit gattool
 [4D:87:5D:55:2F:31][LE]> exit
 ```
+
+_Note: Some connections require you to change the address type to random `-t random`._
+
+Read this [manual](https://helpmanual.io/help/gatttool/) to get more information about gattool.
 
 ### Info
 
