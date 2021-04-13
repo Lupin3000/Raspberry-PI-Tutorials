@@ -1,6 +1,6 @@
 # Bash Monitor Mode
 
-With a small Bash script, you can save time to set your Wi-Fi interfaces into Monitor Mode.
+With a small Bash script you can save some time, to set your Wi-Fi interfaces into Monitor Mode.
 
 ## Objective
 
