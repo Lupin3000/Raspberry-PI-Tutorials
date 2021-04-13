@@ -41,3 +41,4 @@ The author of this repository (_information, scripts, code_) take no responsibil
 - [Bash Monitor Mode](./Goodies/BashMonitorMode)
 - [Python Station scan](./Goodies/PythonStationScan)
 - [Python Access Point scan](./Goodies/PythonAccessPointScan)
+- [SearchSploit](./Goodies/SearchSploit)
