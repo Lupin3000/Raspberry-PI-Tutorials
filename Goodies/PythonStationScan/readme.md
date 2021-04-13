@@ -1,6 +1,6 @@
 # Python Station Scan (Scapy)
 
-With Python, you can also evaluate probe requests. All you need is the Scapy library, and some Python code. I developed this Python script for my own station analysis. If you like it, you can freely use it and further develop it.
+With Python, you can also evaluate probe requests. All you need is the Scapy library, and some Python code. I developed this Python script for my own station analysis. If you like it, you can freely use it and further develop it. In addition, there is also a small bash script which helps you to set the monitor mode for the respective interface.
 
 ## Objective
 
@@ -28,10 +28,10 @@ $ sudo pip3 install scapy
 $ cd ~
 
 # download bash script
-$ curl ... -o monitor-mode.sh
+$ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Goodies/PythonStationScan/monitor-mode.sh -o monitor-mode.sh
 
 # download python script
-$ curl ... -o StationScan.py
+$ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Goodies/PythonStationScan/StationScan.py -o StationScan.py
 
 # set file permissions
 $ chmod u+x monitor-mode.sh
