@@ -1,10 +1,10 @@
-# Python Access Point Scan (Scapy)
+# Bash Monitor Mode
 
-With Python, you can also evaluate beacons and  probe responses. All you need is the Scapy library, and some Python code. I developed this Python script for my own access point analysis. If you like it, you can freely use it and further develop it. In addition, there is also a small [bash script](../BashMonitorMode) which helps you to set the monitor mode for the respective interface.
+With a small Bash script, you can save time to set your Wi-Fi interfaces into Monitor Mode.
 
 ## Objective
 
-The aim of this tutorial is to analyse Wi-Fi access points with Python Scapy.
+The aim of this tutorial is to set the Wi-Fi interface into Monitor Mode.
 
 ## Install needed and/or optional packages
 
