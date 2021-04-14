@@ -181,6 +181,12 @@ $ ubertooth-scan -h
 
 # discover devices and perform Inquiry Scan
 $ ubertooth-scan
+
+# similar to hci scan
+$ ubertooth-scan -s
+
+# extended scan
+$ ubertooth-scan -x
 ```
 
 #### Ubertooth Spectrum Analyzer
@@ -197,6 +203,12 @@ $ ubertooth-specan -h
 
 # run scan (without GUI)
 $ ubertooth-specan
+
+# lower frequency scan (without GUI)
+$ ubertooth-specan -l
+
+# upper frequency scan (without GUI)
+$ ubertooth-specan -u
 ```
 
 #### Intercepting Lower Address Part (LAP)
@@ -220,12 +232,23 @@ $ ubertooth-rx -z -t 20
 
 #### Low Energy sniffing mode (BLE)
 
+This seems to be one of the best features, because many new devices use Bluetooth Low Energy.
+
 ```shell
 # show help (optional)
 $ ubertooth-btle -h
 
-# promiscuous: sniff active connections
+# sniff all active connections (promiscuous mode)
 $ ubertooth-btle -p
+
+# sniff + follow and store to PCAP file (DLT_PPI + DLT_BLUETOOTH_LE_LL)
+$ ubertooth-btle –p –f -c capture.pcap
+
+# sniff + follow and store to PCAP file (DLT_BLUETOOTH_LE_LL_WITH_PHDR)
+$ ubertooth-btle –p –f -q capture.pcap
+
+# specific device
+$ ubertooth-btle –a e2d4c6b8
 ```
 
 There is much more, you need to read for each command/tool the man- or help pages!
