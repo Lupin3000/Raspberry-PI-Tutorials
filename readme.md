@@ -38,6 +38,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ### **:gift: Some goodies**
 - [macOS VNC](./Goodies/macOS_VNC)
+- [macOS SD Card backup](./Goodies/macOS_Backup)
 - [Bash Monitor Mode](./Goodies/BashMonitorMode)
 - [Python Station scan](./Goodies/PythonStationScan)
 - [Python Access Point scan](./Goodies/PythonAccessPointScan)
