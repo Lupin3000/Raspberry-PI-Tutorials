@@ -87,7 +87,7 @@ $ sudo vim /usr/bin/hid_usb
 $ sudo reboot
 ```
 
-> Before you restart the Raspberry PI Zero, you have to change the USB port! So do not use the USB port for power anymore. In addition, make sure that you have another device (_for SSH_) ready.
+> Before you restart the Raspberry PI Zero, you have to change the USB port! So do not use the USB port for power anymore. In addition, make sure that you have Wi-Fi and a second device (_for SSH_) ready. You connect the Raspberry PI Zero to the target via USB (_as Keyboard_) and with the second device (_over Wi-Fi/SSH_) you execute the Bash script.
 
 ```shell
 # confirm /dev/hidg0 (optional)
