@@ -1,6 +1,6 @@
 # Raspberry Pi Zero (W/WH) - USB HID via Wi-Fi
 
-The Raspberry PI Zero can get enough power via USB, and it can be configured, with few steps, as an OTG (_On-The-Go_) USB device. That's awesome, because you can do similar things like [USB Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky-deluxe) with it.
+The Raspberry PI Zero can get enough power via USB, and it can be configured, with few steps, as an OTG (_On-The-Go_) USB device. That's awesome, because you can do similar things like [USB Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky-deluxe) or [O.MG cable](https://mg.lol/blog/omg-cable/) with it.
 
 ## Objective
 
