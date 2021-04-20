@@ -1,10 +1,10 @@
 # Raspberry Pi Zero (W/WH) - USB HID
 
-...
+The Raspberry PI Zero can get enough power via USB, and it can be configured, with few steps, as an OTG (_On-The-Go_) USB device. That's awesome, because you can do similar things like [USB Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky-deluxe) with it.
 
 ## Objective
 
-...
+The aim of this tutorial is to use the Raspberry PI Zero as USB Keyboard (_HID_).
 
 ## Precondition
 
@@ -85,7 +85,11 @@ $ sudo vim /usr/bin/hid_usb
 ```shell
 # reboot system
 $ sudo reboot
+```
 
+> Before you restart the Raspberry PI Zero, you have to change the USB port! So do not use the USB port for power anymore. In addition, make sure that you have another device (_for SSH_) ready.
+
+```shell
 # confirm /dev/hidg0 (optional)
 $ sudo ls -la /dev/hidg0
 
@@ -122,12 +126,17 @@ $ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/mai
 
 # change file permissions
 $ chmod u+x ~/hid_fun.sh
+```
+
+[Here](./hid_fun.sh) you will see the content of the bash script.
+
+```shell
+# new SSH connection
+$ ssh pi@[ip of your Raspberry PI Zero]
 
 # execute bash script
 $ sudo ~/hid_fun.sh
 ```
-
-[Here](./hid_fun.sh) you will see the content of the bash script.
 
 #### Fix language issues
 

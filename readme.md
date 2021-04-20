@@ -36,6 +36,9 @@ The author of this repository (_information, scripts, code_) take no responsibil
 - [Ubertooth One Basics](./Ubertooth)
 - [BLE Encryption with crackle](./Crackle) !!WIP!!
 
+### **:zero: Fun with Zero W/WH**
+- [Wi-Fi HID](./Zero_WIFI_HID)
+
 ### **:gift: Some goodies**
 - [macOS VNC](./Goodies/macOS_VNC)
 - [macOS SD Card backup](./Goodies/macOS_Backup)
