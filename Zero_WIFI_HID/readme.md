@@ -1,4 +1,4 @@
-# Raspberry Pi Zero (W/WH) - WI-FI HID
+# Raspberry Pi Zero (W/WH) - USB HID
 
 ...
 
@@ -22,7 +22,7 @@ Install (_or ensure they are installed_) following packages.
 $ sudo apt update -y && sudo apt upgrade -y
 
 # install optional packages (optional)
-$ sudo apt install -y vim tree
+$ sudo apt install -y vim curl tree
 ```
 
 ## Human Interface Device (HID)
@@ -65,13 +65,16 @@ $ sudo sed -i '/^exit 0.*/i /usr/bin/hid_usb' /etc/rc.local
 In order to create the device (_USB Linux Gadget_) which has a UDC (_USB Device Controller_), create a libcomposite configuration.
 
 ```shell
-# create new empty file
-$ sudo touch /usr/bin/hid_usb
+# download file from GitHub
+$ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Zero_WIFI_HID/hid_usb -o ~/hid_usb
+
+# copy file to specific target
+$ sudo cp ~/hid_usb /usr/bin/hid_usb
 
 # set file permissions
 $ sudo chmod +x /usr/bin/hid_usb
 
-# add content to script
+# modify content for needs (optional)
 $ sudo vim /usr/bin/hid_usb
 ```
 
@@ -114,15 +117,17 @@ $ sudo tree /sys/kernel/config/usb_gadget/hid_usb/
 _Note: The command line tree is shortened. There are much more directories, files and links!_
 
 ```shell
-#
-$
+# download file from GitHub
+$ curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Zero_WIFI_HID/hid_fun.sh -o ~/hid_fun.sh
 
-#
-$
+# change file permissions
+$ chmod u+x ~/hid_fun.sh
 
-#
-$
+# execute bash script
+$ sudo ~/hid_fun.sh
 ```
+
+[Here](./hid_fun.sh) you will see the content of the bash script.
 
 #### Fix language issues
 
