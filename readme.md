@@ -37,7 +37,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 - [BLE Encryption with crackle](./Crackle) !!WIP!!
 
 ### **:zero: Fun with Zero W/WH**
-- [Wi-Fi HID](./Zero_WIFI_HID)
+- [USB HID via Wi-Fi](./Zero_WIFI_HID)
 
 ### **:gift: Some goodies**
 - [macOS VNC](./Goodies/macOS_VNC)
