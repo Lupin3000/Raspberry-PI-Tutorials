@@ -48,18 +48,6 @@ $ echo "libcomposite" | sudo tee -a /etc/modules
 
 [Here](https://www.raspberrypi.org/documentation/configuration/device-tree.md) you will find some information about the Raspberry `Device Tree`.
 
-### Add libcomposite configuration on boot
-
-In order to have the libcomposite configuration run when the Raspberry boots, you simply add the command to file `/etc/rc.local`.
-
-```shell
-# backup rc.local (optional)
-$ sudo cp /etc/rc.local ~/etc-rc.local.bak
-
-# add new content in rc.local (before exit 0)
-$ sudo sed -i '/^exit 0.*/i /usr/bin/hid_usb' /etc/rc.local
-```
-
 ### Creating the libcomposite configuration (Bash script)
 
 In order to create the device (_USB Linux Gadget_) which has a UDC (_USB Device Controller_), create a libcomposite configuration.
@@ -79,6 +67,41 @@ $ sudo vim /usr/bin/hid_usb
 ```
 
 [Here](./hid_usb) you will see the content of the libcomposite configuration `/usr/bin/hid_usb` for the english keyboard.
+
+### Add libcomposite configuration on boot (rc.local)
+
+In order to have the libcomposite configuration run when the Raspberry boots, you simply add the command to file `/etc/rc.local`.
+
+```shell
+# backup rc.local (optional)
+$ sudo cp /etc/rc.local ~/etc-rc.local.bak
+
+# add new content in rc.local (before exit 0)
+$ sudo sed -i '/^exit 0.*/i /usr/bin/hid_usb' /etc/rc.local
+```
+
+### Add libcomposite configuration on boot (systemd)
+
+The slightly better way to load the configuration during the boot process is via Systemd service.
+
+```shell
+# download service into directory
+$ sudo curl -L https://raw.githubusercontent.com/Lupin3000/Raspberry-PI-Tutorials/main/Zero_WIFI_HID/usb-otg.service -o /etc/systemd/system/usb-otg.service
+
+# reload all service files
+$ sudo systemctl daemon-reload
+
+# start created service
+$ sudo systemctl start usb-otg.service
+
+# enable also for reboot
+$ sudo systemctl enable usb-otg.service
+
+# verify status (optional)
+$ sudo systemctl status usb-otg.service
+```
+
+[Here](./usb-otg.service) you will see the content of the service `/etc/systemd/system/usb-otg.service`.
 
 ### Reboot and verify
 

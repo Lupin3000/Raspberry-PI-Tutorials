@@ -1,0 +1,11 @@
+[Unit]
+Description=USB OTG systemd service.
+ConditionPathIsDirectory=/sys/kernel/config/usb_gadget
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/hid_usb
+
+[Install]
+WantedBy=multi-user.target
