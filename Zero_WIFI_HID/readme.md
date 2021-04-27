@@ -80,6 +80,8 @@ $ sudo cp /etc/rc.local ~/etc-rc.local.bak
 $ sudo sed -i '/^exit 0.*/i /usr/bin/hid_usb' /etc/rc.local
 ```
 
+> _Note: use this option (rc.local) just for testing or debugging!_
+
 ### Add libcomposite configuration on boot (systemd)
 
 The slightly better way to load the configuration during the boot process is via Systemd service.
