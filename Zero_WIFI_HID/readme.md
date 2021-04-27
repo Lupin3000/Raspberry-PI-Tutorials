@@ -171,4 +171,6 @@ In the configuration example, the value `0x409` is used. This value is for Engli
 
 _Note: Since I don't want to list all available values here, I recommend that you're simply looking for them online._
 
+> I wrote a small Python CLI tool, called [BullDog](https://github.com/Lupin3000/BullDog). You can use it to simulate the keyboard easier.
+
 [Go Back](../readme.md)
