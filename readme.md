@@ -34,7 +34,6 @@ The author of this repository (_information, scripts, code_) take no responsibil
 ### **:pager: Bluetooth**
 - [Bluetooth Basics & Analysis](./Bluetooth)
 - [Ubertooth One Basics](./Ubertooth)
-- [BLE Encryption with crackle](./Crackle) !!WIP!!
 
 ### **:zero: Fun with Zero W/WH**
 - [USB HID via Wi-Fi](./Zero_WIFI_HID)
