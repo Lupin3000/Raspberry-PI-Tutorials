@@ -38,6 +38,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ### **:zero: Fun with Zero W/WH**
 - [USB HID via Wi-Fi](./Zero_WIFI_HID)
+- [FM Transmitter](./FMTransmitter)
 
 ### **:gift: Some goodies**
 - [macOS VNC](./Goodies/macOS_VNC)
