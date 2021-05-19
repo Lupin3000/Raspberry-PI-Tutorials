@@ -126,6 +126,8 @@ _Note: in case you like to use VLC, you can do `$ nvlc test.mp3`._
 
 ## Pulseaudio
 
+The first approach is to use `Pulseaudio`, in case you already tried and don't like it - jump over to second approach [BlueALSA](#BlueALSA).
+
 ```shell
 # install package
 $ sudo apt install -y --no-install-recommends pulseaudio pulseaudio-module-bluetooth
@@ -219,5 +221,12 @@ $ play test.mp3
 ```
 
 _Note: This process is very unstable and can be super annoying. I do use 2 terminals (1x for bluetoothctl and 1x for pactl)._
+
+## BlueALSA
+
+```shell
+# install package
+$ sudo apt install -y bluealsa
+```
 
 [Go Back](../readme.md)
