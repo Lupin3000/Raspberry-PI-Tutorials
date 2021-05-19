@@ -196,6 +196,8 @@ Connect the speaker, select audio output (_sink_) and play music.
 [bluetooth]# connect [mac address]
 ```
 
+_Note: Please also note the necessary steps from tutorial [Bluetooth Basics & Analysis](../Bluetooth)!_
+
 ```shell
 # start pulseaudio
 $ pulseaudio --start
