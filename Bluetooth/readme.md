@@ -263,25 +263,9 @@ Failed to connect: org.bluez.Error.Failed
 
 # install package
 $ sudo apt install -y pulseaudio-module-bluetooth
-
-# install sox incl. mp3 add-on
-$ sudo apt install -y sox libsox-fmt-all
-
-# start pulseaudio
-$ sudo pulseaudio --start
-
-# list available audio sinks
-$ sudo pactl list sinks short
-
-# select bluetooth sink
-$ sudo pactl set-default-sink 1
-
-# set volume (optional)
-$ pactl set-sink-volume 1 60%
-
-# play sound
-$ sudo play test.mp3
 ```
+
+Have a look on this specific tutorial about [Bluetooth Speaker with Raspberry PI](../BluetoothSpeaker).
 
 ## Start to dump
 

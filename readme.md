@@ -33,6 +33,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 ### **:pager: Bluetooth**
 - [Bluetooth Basics & Analysis](./Bluetooth)
+- [Bluetooth Speaker with Raspberry PI](./BluetoothSpeaker)
 - [Ubertooth One Basics](./Ubertooth)
 
 ### **:zero: Fun with Zero W/WH**
