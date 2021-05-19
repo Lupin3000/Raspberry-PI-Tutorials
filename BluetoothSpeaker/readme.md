@@ -217,3 +217,5 @@ $ play test.mp3
 ```
 
 _Note: This process is very unstable and can be super annoying. I do use 2 terminals (1x for bluetoothctl and 1x for pactl)._
+
+[Go Back](../readme.md)
