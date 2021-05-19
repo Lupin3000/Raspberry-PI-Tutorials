@@ -254,7 +254,7 @@ Read this [manual](https://helpmanual.io/help/gatttool/) to get more information
 
 ### Info
 
-Sometimes the connect command does not work (_e.g. speakers_), in such cases you can try to install a GUI and the package `pulseaudio-module-bluetooth`.
+Sometimes the connect command does not work (_e.g. speakers_), in such cases you can try to install a GUI or use the package `pulseaudio-module-bluetooth`.
 
 ```shell
 ...
