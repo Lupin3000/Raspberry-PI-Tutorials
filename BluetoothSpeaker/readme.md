@@ -111,6 +111,8 @@ As there is no (_GUI_) player, you need some tools to play media files (_e.g. MP
 
 #### Solution of 3rd issue
 
+_Note: This step is only for [Pulseaudio](#Pulseaudio) needed, for [BlueALSA](#BlueALSA) you should use `aplay`!_
+
 ```shell
 # install package
 $ sudo apt install -y sox libsox-fmt-all
@@ -227,6 +229,28 @@ _Note: This process is very unstable and can be super annoying. I do use 2 termi
 ```shell
 # install package
 $ sudo apt install -y bluealsa
+
+# start service
+$ sudo systemctl start bluealsa.service
+
+# get status (optional)
+$ sudo systemctl status bluealsa.service
+```
+
+Same as above - connect speaker and play sound.
+
+```shell
+# trust a device
+[bluetooth]# trust [mac address]
+
+# pair a device
+[bluetooth]# pair [mac address]
+
+# connect to device
+[bluetooth]# connect [mac address]
+
+# play sound
+$ aplay -D bluealsa:HCI=hci0,DEV=[mac address],PROFILE=a2dp test.mp3
 ```
 
 [Go Back](../readme.md)
