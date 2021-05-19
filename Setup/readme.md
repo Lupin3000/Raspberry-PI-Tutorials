@@ -76,4 +76,10 @@ $ raspi-config
 
 _Note: Please activate SSH and set up the Wi-Fi again (_just to ensure_)._
 
+## Additional
+
+From version 1.6, you can save some time (_many configuration steps_) with the advanced option feature. Just hit keys [Ctrl] + [Shift] + [x]!
+
+![Advanced Options](./advanced_options.jpg)
+
 [Go Back](../readme.md)
