@@ -36,13 +36,13 @@ The simplest way is to use the Re4son-Pi-Kernel, [here](https://re4son-kernel.co
 $ curl -L -C - https://re4son-kernel.com/download/re4son-kernel-current/ -o re4son-kernel_current.tar.xz
 
 # unzip archive
-tar -xJf re4son-kernel_current.tar.xz
+$ tar -xJf re4son-kernel_current.tar.xz
 
 # change into extracted folder
-cd re4son-kernel_*
+$ cd re4son-kernel_*
 
 # run installation
-sudo ./install.sh
+$ sudo ./install.sh
 ```
 
 _Note: Be patient, the process will take some time. You can also answer all questions with "Y" (yes)._
