@@ -16,6 +16,7 @@ The author of this repository (_information, scripts, code_) take no responsibil
 
 - [Setup Raspberry PI](./Setup)
 - [Prepare Raspberry PI](./Preparation)
+- [Pimoroni Button SHIM](./PimoroniButtonShim)
 
 ### **:satellite: Wi-Fi**
 
