@@ -10,7 +10,7 @@ _Attention: You have to solder the components beforehand, this is not described 
 
 ![Button Shim on Flirc Case](./BtnShim_FlircCase.jpg)
 
-My Button SHIM on [Flirc Case](https://flirc.tv/).
+My Button SHIM on [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) and [Flirc Case](https://flirc.tv/).
 
 ## Precondition
 
