@@ -19,7 +19,9 @@ You should already have read (_and successful carried out_) the following tutori
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 
-## Install needed and/or optional packages
+## Button SHIM
+
+### Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
 
@@ -28,7 +30,7 @@ Install (_or ensure they are installed_) following packages.
 $ sudo apt update -y && sudo apt upgrade -y
 ```
 
-## Preparation
+### Preparation
 
 Enable the I2C interface on the Raspberry Pi.
 
@@ -41,14 +43,14 @@ $ sudo raspi-config
 
 Select `Interfacing Options`, next `I2C` and activate `<Yes>`.
 
-## Install Python Button SHIM
+### Install Python Button SHIM
 
 ```shell
 # install button shim package
 $ sudo apt install -y python3-buttonshim
 ```
 
-## Test the device
+### Test the device
 
 ```shell
 # start python console
