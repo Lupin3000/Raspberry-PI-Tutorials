@@ -8,6 +8,10 @@ The aim of this tutorial is to describe the configuration of Raspberry PI, the i
 
 _Attention: You have to solder the components beforehand, this is not described here!_
 
+![Button Shim on Flirc Case](./BtnShim_FlircCase.jpg)
+
+My Button SHIM on [Flirc Case](https://flirc.tv/).
+
 ## Precondition
 
 You should already have read (_and successful carried out_) the following tutorials.
