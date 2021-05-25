@@ -19,9 +19,8 @@ You should already have read (_and successful carried out_) the following tutori
 - [Setup Raspberry PI](../Setup)
 - [Prepare Raspberry PI](../Preparation)
 
-## Button SHIM
 
-### Install needed and/or optional packages
+## Install needed and/or optional packages
 
 Install (_or ensure they are installed_) following packages.
 
@@ -29,6 +28,8 @@ Install (_or ensure they are installed_) following packages.
 # update system (optional)
 $ sudo apt update -y && sudo apt upgrade -y
 ```
+
+## Button SHIM
 
 ### Preparation
 
